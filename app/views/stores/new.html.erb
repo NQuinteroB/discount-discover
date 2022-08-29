@@ -1,54 +1,18 @@
-<h1>Add New Friend</h1>
-<br/>
-
-<%= simple_form_for[@store] do |f| %>
-  <% if friend.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
-
-      <ul>
-        <% friend.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Create Store</h3>
+        <%= simple_form_for @store do |f| %>
+          <%= f.input :name, placeholder: 'ShirtShop' %>
+          <%= f.input :address, placeholder: 'Bollstr 123,Köln-Germany' %>
+           <%= f.input :opening_hour, placeholder: '09:30' %>
+            <%= f.input :closing_hour, placeholder: '20:00' %>
+            <!-- Store Logo -->
+          <%#= f.input :photo, as: :file %>
+          <%= f.submit class: 'btn btn-flat' %>
         <% end %>
-      </ul>
+      </div>
     </div>
-  <% end %>
-
-  <div class="">
-    <%= f.label :name, style: "display: block" %>
-    <%= f.input :name, class:"form-control", placeholder:"ShirtBuy" %>
   </div>
-
-  <div class="">
-    <%= f.label :address, style: "display: block" %>
-    <%= f.input :address, class:"form-control", placeholder:"Bollstr 144,33899 Germany"  %>
-  </div>
-
-  <div class="">
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email, class:"form-control", class:"form-control", placeholder:"john@gmail.com"  %>
-  </div>
-
-  <div class="">
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone, class:"form-control", placeholder:"021354558"  %>
-  </div>
-
-  <div class="">
-    <%= form.label :twitter, style: "display: block" %>
-    <%= form.text_field :twitter, class:"form-control", placeholder:"twitter@joohn1"  %>
-  </div>
-  <div class="">
-
-    <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden %>
-  </div>
-
-
-<br/>
-  <div class="action">
-    <%= form.submit class:'btn btn-secondary' %>
-  </div>
-<% end %>
-
-<br/>
-<%= link_to 'Back', stores_path, class:"btn btn-dark" %>
+</div>

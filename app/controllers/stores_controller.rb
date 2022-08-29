@@ -36,7 +36,7 @@ class StoresController < ApplicationController
   end
 
   def update
-    if @store.update(book_params)
+    if @store.update(store_params)
       redirect_to store_path(@store), notice: "Your Store has been edited successfully!!"
     else
       render :edit, status: :unprocessable_entity
