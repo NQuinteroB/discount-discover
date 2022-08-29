@@ -8,6 +8,12 @@ class StoresController < ApplicationController
     @stores = Store.all
   end
 
+  def show
+    @review = Review.new
+    @product = Product.new
+
+  end
+
   def new
     @store = Store.new
   end
@@ -26,10 +32,7 @@ class StoresController < ApplicationController
     redirect_to stores_path, notice: "Your Store is Deleted🥺!!"
   end
 
-  def show
-    @review = Review.new
 
-  end
 
   def edit
 
@@ -56,6 +59,6 @@ class StoresController < ApplicationController
   end
 
    def store_params
-     params.require(:store).permit(:name, :address, :opening_hour, :closing_hour)
+     params.require(:store).permit(:name, :address, :opening_hour, :closing_hour, :user_id)
   end
 end
