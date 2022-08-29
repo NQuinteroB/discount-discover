@@ -1,2 +1,54 @@
-<h1>Stores#new</h1>
-<p>Find me in app/views/stores/new.html.erb</p>
+<h1>Add New Friend</h1>
+<br/>
+
+<%= simple_form_for[@store] do |f| %>
+  <% if friend.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(friend.errors.count, "error") %> prohibited this friend from being saved:</h2>
+
+      <ul>
+        <% friend.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="">
+    <%= f.label :name, style: "display: block" %>
+    <%= f.input :name, class:"form-control", placeholder:"ShirtBuy" %>
+  </div>
+
+  <div class="">
+    <%= f.label :address, style: "display: block" %>
+    <%= f.input :address, class:"form-control", placeholder:"Bollstr 144,33899 Germany"  %>
+  </div>
+
+  <div class="">
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email, class:"form-control", class:"form-control", placeholder:"john@gmail.com"  %>
+  </div>
+
+  <div class="">
+    <%= form.label :phone, style: "display: block" %>
+    <%= form.text_field :phone, class:"form-control", placeholder:"021354558"  %>
+  </div>
+
+  <div class="">
+    <%= form.label :twitter, style: "display: block" %>
+    <%= form.text_field :twitter, class:"form-control", placeholder:"twitter@joohn1"  %>
+  </div>
+  <div class="">
+
+    <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+  </div>
+
+
+<br/>
+  <div class="action">
+    <%= form.submit class:'btn btn-secondary' %>
+  </div>
+<% end %>
+
+<br/>
+<%= link_to 'Back', stores_path, class:"btn btn-dark" %>

@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-  resources :stores, only: %i[index new create destroy]
+  resources :stores, only: %i[index new create destroy edit update]
 
   resources :stores, only: %i[show] do
     resources :products
