@@ -1,10 +1,6 @@
 <div class="card">
-  <div class="card-header">
-
-<h2>Sign up</h2>
-
-  </div>
     <div class="card-body m-5">
+      <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: :false }) do |f| %>
   <%= f.error_notification %>
@@ -38,7 +34,6 @@
   <div class="form-actions">
     <%= f.button :submit, "Sign up", class:'btn btn-secondary'%>
   </div>
-    </div>
  </div>
 <br/>
 <% end %>
