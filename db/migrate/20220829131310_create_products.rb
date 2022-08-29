@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.float :price
       t.integer :discount
       t.text :description
-      t.boolean :active
+      t.boolean :active, default: true
       t.references :store, null: false, foreign_key: true
 
       t.timestamps
