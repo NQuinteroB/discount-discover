@@ -14,12 +14,12 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @friend = current_user.products.build
+    @product = Product.new
   end
 
   def create
-    #@product = Product.new(product_params)
-    @product= current_user.products.build(product_params)
+    @product = Product.new(product_params)
+    #@product=  store.products.build(product_params)
     @product.store = @store
     if @product.save
       redirect_to store_path(@store)

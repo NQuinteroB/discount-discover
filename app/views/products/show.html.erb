@@ -3,11 +3,11 @@
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
      
      <div class="card m-4">
-     	 <h1><%= @product.name %></h1>
-     	<h1>Product Page</h1>
+     	 <p>Product name: <%= @product.name %></p>
+     	
      </div>
 
-      <div class="list-group">
+      <!-- <div class="list-group">
         <%# @restaurant.reviews.each do |review| %>
           <li class="list-group-item">
             <small>
@@ -24,7 +24,7 @@
             <p><%#= review.content %></p>
           </li>
         <%# end %>
-      </div>
+      </div> -->
 
       <%#= simple_form_for [@restaurant, @review] do |f| %>
         <%#= f.input :rating, collection: 0..5 %>

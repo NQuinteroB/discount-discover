@@ -1,6 +1,6 @@
 <div class="position-relative">
   <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%#= @store.photo.attached? ? cl_image_path(@store.photo.key) : asset_path('store_background.jpg') %>)">
-    <h1><%= @store.name %></h1>
+    <p><%= @store.name %></p>
   </div>
   <span class="product-tag"><%#= pluralize(@store.products.size, "product") %></span>
 </div>
