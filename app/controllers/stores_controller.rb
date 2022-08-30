@@ -1,15 +1,16 @@
 class StoresController < ApplicationController
- before_action :set_params, only: %i[show destroy edit update]
- before_action :authenticate_user!, except: [:index, :show]
- before_action :correct_user, only: [:edit, :update, :destroy]
+ before_action :set_params, only: %i[destroy edit update show]
+ before_action :authenticate_user!
+ before_action :correct_user, only: [:edit, :update, :destroy, :show]
 
 
   def index
-    @stores = Store.all
+    @stores = Store.where(user_id: current_user)
+    
   end
 
   def show
-    @review = Review.new
+
     @product = Product.new
 
   end
@@ -49,7 +50,7 @@ class StoresController < ApplicationController
 
   def correct_user
     @store = current_user.stores.find_by(id: params[:id])
-    redirect_to stores_path, notice: "Not Authorized To Edit❌" if @store.nil?
+    redirect_to stores_path, notice: "Not Authorized ❌" if @store.nil?
   end
 
   private

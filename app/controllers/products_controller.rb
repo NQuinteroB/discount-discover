@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
-    before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :set_store, only: [:new, :create]
   def index
     @products = Product.all
@@ -15,11 +15,12 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    #@product = current_user.products.build
   end
 
   def create
-    @product = Product.new(product_params)
-    #@product=  store.products.build(product_params)
+    #@product = Product.new(product_params)
+    @product=  @store.products.build(product_params)
     @product.store = @store
     if @product.save
       redirect_to store_path(@store)
