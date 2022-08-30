@@ -4,13 +4,13 @@
    <h1 class="hello" style="line-height: 2em;">Products Home Page For All Users</h1>
    <div class="container py-5">
   <div class="d-flex align-items-center justify-content-between mb-3">
-    
+
     <%#= link_to "Create a new store", new_product_path, class: "btn btn-flat" %>
   </div>
   <div class="row">
     <% @products.each do |product| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <%= link_to products_new_path, class:"text-decoration-none text-black" do %>
+        <%= link_to store_products_path, class:"text-decoration-none text-black" do %>
           <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%#= store.photo.attached? ? cl_image_path(store.photo.key) : asset_path('store_background.jpg') %>)">
             <p>Product name: <%= product.name %></p>
           </div>
@@ -22,4 +22,3 @@
 </div>
 </div>
 </div>
-
