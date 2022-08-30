@@ -6,13 +6,11 @@ class StoresController < ApplicationController
 
   def index
     @stores = Store.where(user_id: current_user)
-    
+
   end
 
   def show
-
     @product = Product.new
-
   end
 
   def new
@@ -45,7 +43,7 @@ class StoresController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
-    
+
   end
 
   def correct_user
