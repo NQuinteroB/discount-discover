@@ -16,9 +16,9 @@ Rails.application.routes.draw do
   get 'stores/destroy'
   get 'stores/show'
   devise_for :users
-  root to: "pages#home"
+  root to: "pages#index"
 
-  resources :stores, only: %i[index new create destroy]
+  resources :stores, only: %i[index new create destroy edit update]
 
   resources :stores, only: %i[show] do
     resources :products

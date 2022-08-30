@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :stores
   has_many :reviews
 
-  validates :first_name, :last_name, :username, presence: true
+  #validates :first_name, :last_name, :username, presence: true
 end
