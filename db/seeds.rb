@@ -68,14 +68,16 @@ response = JSON.parse(response.body)
 puts "Creating products"
 Store.all.each do |store|
   number = (1..8).to_a.sample
-  (1..number).each_with_index do |x, index|
+  (1..number).each_with_index do |_x, index|
     a = Product.new(
       name: Faker::Commerce.product_name,
       price: Faker::Commerce.price,
       discount: (1..50).to_a.sample,
       store_id: store.id
     )
-    url = response["response"]["images"][index]["thumbnail"]["url"]
+    product = response["response"]["images"][index]
+    product = response["response"]["images"][rand(1..8)] while product.nil?
+    url = product["thumbnail"]["url"]
     file_aux = URI.open(url)
     a.photo.attach(io: file_aux, filename: "photo#{index}.png", content_type: "image/png")
     a.save
