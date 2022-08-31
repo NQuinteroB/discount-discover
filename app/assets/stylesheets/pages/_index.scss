@@ -33,15 +33,12 @@
   background: var(--surface-2);
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-2);
-  padding: 2px;
 }
 
 .media-element > img {
   inline-size: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  padding: 2px;
-  margin-left: 20px;
 }
 
 .snaps-inline {
