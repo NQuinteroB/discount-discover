@@ -5,6 +5,10 @@
         <h3>Add a product to your <%= @store.name %> store</h3>
         <%= simple_form_for [@store, @product] do |f| %>
           <%= f.input :name, placeholder: "Enter name" %>
+          <%= f.input :price, placeholder: "Product price" %>
+          <%= f.input :discount, placeholder: "Discount" %>
+          <%= f.input :description, placeholder: "Add a description" %>
+          <%= f.input :photo, as: :file %>
           <%#= f.association :movie, prompt: "Select a movie", input_html: {data: {controller: "select"}} %>
           <%= f.number_field :store_id, id: :product_store_id, class:"form-control", value: current_user.id, type: :hidden %>
           <%= f.submit class: "btn btn-flat" %>
