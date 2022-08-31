@@ -10,3 +10,28 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+#navbar {
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: $mint;
+   height: 58px;
+}
+
+.dropdown-menu {
+  right: 0 !important;
+  left: auto !important;
+}
+
+.btn-navbar {
+  border: none;
+  background-color: $mint;
+  color: white;
+}
+
+.fa-solid {
+  font-size: 28px;
+  color: white;
+}
