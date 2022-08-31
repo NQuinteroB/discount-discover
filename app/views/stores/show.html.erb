@@ -12,13 +12,13 @@
         Add a product
       </button> -->
      <%= link_to "Add Product", new_store_product_path(@store), class: "btn btn-cancel" %>
+     <%= link_to "Add a review", new_store_review_path(@store), class: "btn btn-cancel" %>
 
     <%#= f.number_field :user_id, id: :store_user_id, class:"form-control", value: current_user.id, type: :hidden %>
-      <%= link_to "delete this store", store_path(@store), class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this store?" } %>
+      <%= link_to "Delete this store", store_path(@store), class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this store?" } %>
     </div>
   </div>
  </div>
 
  <%= link_to "Show products",store_product_path(@store), class: "btn btn-cancel" %>
 <%= render "products/modal", store: @store, product: @product %>
-
