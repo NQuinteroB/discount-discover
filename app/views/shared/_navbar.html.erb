@@ -15,9 +15,10 @@
           <i class="fa-solid fa-user"></i>
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Action two</a></li>
-          <li><a class="dropdown-item" href="#">Action three</a></li>
+
+          <li><%= link_to "My Store", store_path, class: "dropdown-item" %></li>
+          <li><a class="dropdown-item" href="store">My Store</a></li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
         </ul>
       </div>
     </div>

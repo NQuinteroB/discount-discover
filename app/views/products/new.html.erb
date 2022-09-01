@@ -1,19 +1,34 @@
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-        <h3>Add a product to your <%= @store.name %> store</h3>
-        <%= simple_form_for [@store, @product] do |f| %>
-          <%= f.input :name, placeholder: "Enter name" %>
-          <%= f.input :price, placeholder: "Product price" %>
-          <%= f.input :discount, placeholder: "Discount" %>
-          <%= f.input :description, placeholder: "Add a description" %>
-          <%= f.input :photo, as: :file %>
-          <%#= f.association :movie, prompt: "Select a movie", input_html: {data: {controller: "select"}} %>
-          <%= f.number_field :store_id, id: :product_store_id, class:"form-control", value: current_user.id, type: :hidden %>
-          <%= f.submit class: "btn btn-flat" %>
-        <% end %>
-      </div>
-    </div>
+<div class="store-banner d-flex align-items-center mb-3">
+  <div class="container d-flex justify-content-center">
+    <h2><i class="fa-solid fa-store mr-3"></i></h2>
+    <h2>My Products</h2>
   </div>
 </div>
+
+<div class="container">
+  <h3 class="mt-4">Add a product to your <%= @store.name %> store</h3>
+  <div class="mt-4">
+  <%= simple_form_for [@store, @product] do |f| %>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :name, placeholder: "Enter name:" %>
+    <div class="row g-3">
+      <div class="col">
+        <%= f.input :price, placeholder: "Product price:" %>
+      </div>
+      <div class="col">
+        <%= f.input :discount, placeholder: "Discount:" %>
+      </div>
+    </div>
+    <%= f.input :description, placeholder: "Add a description:" %>
+    <%#= f.association :movie, prompt: "Select a movie", input_html: {data: {controller: "select"}} %>
+    <%= f.number_field :store_id, id: :product_store_id, class:"form-control", value: current_user.id, type: :hidden %>
+  </div>
+
+    <div class="d-flex justify-content-center mt-5">
+      <%= f.submit class: "btn btn-flat" %>
+    </div>
+  <% end %>
+</div>
+
+
+<%= render "shared/navbar" %>
