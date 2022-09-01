@@ -4,6 +4,12 @@ class PagesController < ApplicationController
 
   def index
     @stores = Store.all
+    @markers = @stores.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def dashboard
