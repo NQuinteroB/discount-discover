@@ -18,7 +18,7 @@
 
           <li><%= link_to "My Store", store_path, class: "dropdown-item" %></li>
           <li><a class="dropdown-item" href="store">My Store</a></li>
-          <li><a class="dropdown-item" href="#">Sign out</a></li>
+          <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
         </ul>
       </div>
     </div>
