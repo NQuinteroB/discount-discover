@@ -1,23 +1,25 @@
 class StoresController < ApplicationController
  before_action :set_params, only: %i[destroy edit update show]
  before_action :authenticate_user!
- before_action :correct_user, only: [:edit, :update, :destroy]
-
 
   def index
-    @stores = Store.all
+    @stores = policy_scope(Store)
+    # @stores = Store.all
   end
 
   def show
+    authorize @store
     @product = Product.new
   end
 
   def new
     @store = Store.new
+    authorize @store
   end
 
   def create
     @store=Store.new(store_params)
+    authorize @store
     if @store.save
       redirect_to store_path(@store)
     else
@@ -26,11 +28,10 @@ class StoresController < ApplicationController
   end
 
   def destroy
+    authorize @store
     @store.destroy
     redirect_to stores_path, notice: "Your Store is Deleted🥺!!"
   end
-
-
 
   def edit
 
@@ -43,11 +44,6 @@ class StoresController < ApplicationController
       render :edit, status: :unprocessable_entity
     end
 
-  end
-
-  def correct_user
-    @store = current_user.stores.find_by(id: params[:id])
-    redirect_to stores_path, notice: "Not Authorized ❌" if @store.nil?
   end
 
   private

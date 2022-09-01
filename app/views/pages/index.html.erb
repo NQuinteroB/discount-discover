@@ -1,15 +1,25 @@
 
-<h2 class="section-title pt-2">Best rated Stores</h2>
+<h2 class="pt-2 mt-5 mb-4 title-dd">DISCOUNT DISCOVER</h2>
+
+<div class="discounts-amount d-flex justify-content-around">
+  <%number = 10%>
+  <% (1..4).each do %>
+    <div class="discount-item d-flex align-items-center">
+      <h5 class="discount-amount"><%=number%>%</h5>
+      <% number += 10 %>
+    </div>
+  <% end %>
+</div>
 
 <div class="cards-container overflow-auto d-flex mt-2 pt-2">
   <%@stores.each do |store| %>
     <div class="store-card d-flex p-3 mx-3">
       <div class="left-info">
-        <h3><%= store.name %></h3>
-        <h5>Discounts up to...</h5>
+        <p><strong><%= store.name %></strong></p>
+        <p>Discounts up to...</p>
       </div>
       <div class="right-info">
-        <%= cl_image_tag store.photo.key, height: 100, crop: :fill %>'>
+        <%= cl_image_tag store.photo.key, height: 100, crop: :fill, class: "store-image" %>
         <h4>1,5 km</h4>
       </div>
     </div>

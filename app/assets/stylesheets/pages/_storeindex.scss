@@ -1,5 +1,29 @@
+body {
+  background-color: $my-blue;
+}
+
+.title-dd {
+  font-family: $headers-font;
+  color: $white;
+  text-align: center;
+}
+
+.discount-item {
+  background-color: $my-orange;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+.discount-amount {
+  font-family: $body-font;
+  color: $white;
+}
+
 .store-card {
   background-color: $mint;
   border-radius: 15px;
 }
 
+.store-image {
+  border-radius: 50%;
+}

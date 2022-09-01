@@ -1,10 +1,10 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :set_store, only: [:new, :create]
+
   def index
-    @products = Product.all
+    @products = policy_scope(Product)
   end
 
   def show
@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    authorize @product
     #@product = current_user.products.build
   end
 
@@ -22,6 +23,7 @@ class ProductsController < ApplicationController
     #@product = Product.new(product_params)
     @product=  @store.products.build(product_params)
     @product.store = @store
+    authorize @product
     if @product.save
       redirect_to store_path(@store)
     else
@@ -31,12 +33,8 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
+    authorize @product
     redirect_to store_path(@product.store), status: :see_other
-  end
-
-  def correct_user
-    @product = current_user.products.find_by(id: params[:id])
-    redirect_to products_path, notice: "Not Authorized To Edit❌" if @product.nil?
   end
 
   private
@@ -53,6 +51,3 @@ class ProductsController < ApplicationController
     @store = Store.find(params[:store_id])
   end
 end
-
-
-
