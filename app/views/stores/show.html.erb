@@ -1,7 +1,8 @@
+<% if @store.user == current_user %>
 <div class="store-banner d-flex align-items-center mb-3">
   <div class="container d-flex justify-content-center">
     <h2><i class="fa-solid fa-store mr-3"></i></h2>
-     <% if @store.user == current_user %>
+     
     <h2>My store</h2>
   </div>
 </div>
@@ -28,7 +29,17 @@
 
 <% else %>
 
-<h2>STORE PHOTO</h2>
+<div class="card-trip ">
+  <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @store.name %></h2>
+      <p><%#= @store.reviews %></p>
+    </div>
+   <h1 class="fa-regular fa-heart m-2">👨🏾‍💻</h1>
+    <img src="https://scontent-dus1-1.xx.fbcdn.net/v/t1.6435-1/51288995_1218000288348043_804808650009870336_n.jpg?stp=dst-jpg_p320x320&_nc_cat=109&ccb=1-7&_nc_sid=7206a8&_nc_ohc=jd1VP-LRibIAX8_qsJS&tn=rTxgKrhWPRlptM74&_nc_ht=scontent-dus1-1.xx&oh=00_AT_qIRAKsY6ybgGlY3PK4Hrc_7mDK2jO9Dw04OCz05XJ-A&oe=63186D04" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
   </div>
 </div>
 
