@@ -1,11 +1,11 @@
 class StoresController < ApplicationController
  before_action :set_params, only: %i[destroy edit update show]
  before_action :authenticate_user!
- before_action :correct_user, only: [:edit, :update, :destroy, :show]
+ before_action :correct_user, only: [:edit, :update, :destroy]
 
 
   def index
-    @stores = Store.All
+    @stores = Store.all
   end
 
   def show
