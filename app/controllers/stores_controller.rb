@@ -30,7 +30,7 @@ class StoresController < ApplicationController
   def destroy
     authorize @store
     @store.destroy
-    redirect_to stores_path, notice: "Your Store is Deleted🥺!!"
+    redirect_to stores_path, notice: "Your Store is Deleted🥺!!", status: :see_other
   end
 
   def edit

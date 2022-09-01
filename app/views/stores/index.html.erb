@@ -1,23 +1,27 @@
-<div class="cover mb-4 d-flex align-items-center justify-content-center">
-  <div class="text-center text-white">
-    <h1>Create any kind of products</h1>
-    <h3 class="typed-js" data-controller="typed-js"></h3>
+<div class="store-banner d-flex align-items-center mb-3">
+  <div class="container d-flex justify-content-center">
+    <h2><i class="fa-solid fa-store mr-3"></i></h2>
+    <h2>My stores</h2>
   </div>
 </div>
-<div class="container py-5">
-  <div class="d-flex align-items-center justify-content-between mb-3">
-    <h3 class="mb-0">My stores</h3>
-    <%= link_to "Create a new store", new_store_path, class: "btn btn-flat" %>
-  </div>
-  <div class="row">
-    <% @stores.each do |store| %>
-      <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <%= link_to store_path(store), class:"text-decoration-none text-black" do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%#= store.photo.attached? ? cl_image_path(store.photo.key) : asset_path('store_background.jpg') %>)">
-            <%= store.name %>
-          </div>
+
+  <div class="container py-5">
+    <div class="d-flex align-items-center justify-content-end mb-3">
+      <%= link_to "Create a new store", new_store_path, class: "btn-ghost" %>
+    </div>
+
+<%# position-absolute top-50 start-50 translate-middle %>
+
+<div class= "container position-absolute top-50 start-50 translate-middle ">
+    <div class=" d-flex flex-column mb-3 mt-5">
+      <% @stores.each do |store| %>
+        <% if store.user_id == current_user.id %>
+          <%= link_to store_path(store), class:"store-link" do %>
+              <%= store.name %>
+          <% end %>
+            <hr style="color:gray">
         <% end %>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
