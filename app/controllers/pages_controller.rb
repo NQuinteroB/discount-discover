@@ -5,5 +5,6 @@ class PagesController < ApplicationController
   end
 
   def index
+    @stores = Store.all
   end
 end
