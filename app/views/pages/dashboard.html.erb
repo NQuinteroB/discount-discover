@@ -1,1 +1,15 @@
-<h1>hello from Dashboard</h1>
+
+<div class="store-banner d-flex align-items-center mb-3">
+  <div class="container d-flex justify-content-center">
+    <h2>Dashboard</h2>
+  </div>
+</div>
+
+
+<div class="container d-flex flex-column position-absolute top-50 start-50 translate-middle">
+  <%= link_to "Edit profile", "#", class: "btn-flat my-3" %>
+  <%= link_to "Favourites","#", class: "btn-flat my-3" %>
+  <%= link_to "My stores", stores_path, class: "btn-flat my-3" %>
+
+  <%= link_to "Messages","#", class: "btn-flat my-3" %>
+</div>
