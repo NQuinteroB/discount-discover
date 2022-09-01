@@ -30,28 +30,20 @@
 <% else %>
 
 <div class="card-trip ">
-  <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60" />
+  <%= cl_image_tag @store.photo.key, height: 100, crop: :fill %>
   <div class="card-trip-infos">
     <div>
       <h2><%= @store.name %></h2>
-      <p><%#= @store.reviews %></p>
+      <p> <%= link_to "Reviews", @store_reviews_new_path, class: "btn btn-warning btn-sm" %></p>
     </div>
-   <h1 class="fa-regular fa-heart m-2">👨🏾‍💻</h1>
-    <img src="https://scontent-dus1-1.xx.fbcdn.net/v/t1.6435-1/51288995_1218000288348043_804808650009870336_n.jpg?stp=dst-jpg_p320x320&_nc_cat=109&ccb=1-7&_nc_sid=7206a8&_nc_ohc=jd1VP-LRibIAX8_qsJS&tn=rTxgKrhWPRlptM74&_nc_ht=scontent-dus1-1.xx&oh=00_AT_qIRAKsY6ybgGlY3PK4Hrc_7mDK2jO9Dw04OCz05XJ-A&oe=63186D04" class="card-trip-user avatar-bordered" />
+   <h3 class="fa-regular fa-heart m-2"> <!-- 👨🏾‍💻 --> </h3>
+    <h5 class="rounded-circle ">4.6 km</h5>
   </div>
 </div>
   </div>
 </div>
 
 <div class="d-flex align-items-center" style="height: 100%; flex-direction: column;">
-  <div class="container d-flex flex-column my-5">
-      <h2 class="text-center"><%= @store.name %></h2>
-      <div class="d-flex align-items-center my-3">
-        <span class="text-center"><em class="text-muted"><%= "You dont have create any products yet. Start now!" if @store.products.empty? %></em></span>
-      </div>
-        <!--  <button type="button" class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#new_cate_modal"> Add a product
-        </button> -->
-  </div>
 
   <div class="btn-container d-flex flex-column">
     
