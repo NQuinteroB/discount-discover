@@ -1,0 +1,34 @@
+.btn-ghost {
+  color: $black;
+  border: 2px solid $mint;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.btn-flat {
+  color: black;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background: $mint;
+  transition: background 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-danger {
+  color: $cherry;
+  border: 1px solid $cherry;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-container {
+  width: 75%;
+}

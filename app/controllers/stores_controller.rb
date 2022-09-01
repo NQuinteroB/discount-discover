@@ -5,8 +5,7 @@ class StoresController < ApplicationController
 
 
   def index
-    @stores = Store.where(user_id: current_user)
-
+    @stores = Store.All
   end
 
   def show
