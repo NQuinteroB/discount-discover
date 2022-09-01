@@ -29,9 +29,9 @@
 
 <% else %>
 
-<div class="card-trip ">
+<div class="card-trip rounded-bottom">
   <%= cl_image_tag @store.photo.key, height: 100, crop: :fill %>
-  <div class="card-trip-infos">
+  <div class="card-trip-infos ">
     <div>
       <h2><%= @store.name %></h2>
       <p> <%= link_to "Reviews", @store_reviews_new_path, class: "btn btn-warning btn-sm" %></p>
@@ -47,7 +47,7 @@
 
   <div class="btn-container d-flex flex-column">
     
-    <%= link_to "Show products",store_products_path(@store), class: "btn-ghost my-3" %>
+    <%#= link_to "Show products",store_products_path(@store), class: "btn-ghost my-3" %>
         <%#= f.number_field :user_id, id: :store_user_id, class:"form-control", value: current_user.id, type: :hidden %>
     
     <%= render "products/modal", store: @store, product: @product %>
