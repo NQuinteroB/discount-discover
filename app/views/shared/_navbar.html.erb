@@ -18,7 +18,7 @@
 
           <%# <li><%= link_to "My Store", store_path, class: "dropdown-item" %></li> %>
           <li><a class="dropdown-item" href="#">My Store</a></li>
-          <%# <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %> %>
+          <li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link", class: "btn btn-sm" %></li>
         </ul>
       </div>
     </div>
