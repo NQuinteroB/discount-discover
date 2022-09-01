@@ -1,7 +1,7 @@
 
 <h2 class="pt-2 mt-5 mb-4 title-dd">DISCOUNT DISCOVER</h2>
 
-<div class="discounts-amount d-flex justify-content-around">
+<div class="discounts-amount d-flex justify-content-around my-5">
   <%number = 10%>
   <% (1..4).each do %>
     <div class="discount-item d-flex align-items-center justify-content-center">
@@ -11,16 +11,33 @@
   <% end %>
 </div>
 
-<div class="cards-container overflow-auto d-flex mt-2 pt-2">
+<div class="map-container mb-5" data-controller="map"
+       data-map-markers-value="<%= @markers.to_json %>"
+       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
+<div class="cards-container overflow-auto d-flex mt-5 pt-2">
   <%@stores.each do |store| %>
-    <div class="store-card d-flex p-3 mx-3">
-      <div class="left-info">
-        <p><strong><%= store.name %></strong></p>
-        <p>Discounts up to...</p>
+    <div class="store-card pt-3 mx-3">
+    <div class="left-right-info d-flex mx-3">
+      <div class="left-info me-2 d-flex align-items-center">
+        <div>
+          <h4><strong><%= store.name %></strong></h4>
+          <h5><strong>1,5 km</strong></h5>
+        </div>
       </div>
       <div class="right-info">
-        <%= cl_image_tag store.photo.key, height: 100, crop: :fill, class: "store-image" %>
-        <h4>1,5 km</h4>
+        <%= cl_image_tag store.photo.key, height: 100, crop: :fill, class: "store-image" if store.photo.attached?%>
+      </div>
+    </div>
+      <div class="card-bottom d-flex align-items-center justify-content-between mt-2 py-2 px-4">
+        <h5>Discounts up to...</h5>
+        <div class="">
+          <div class="card-discount-item d-flex flex-column align-items-center justify-content-center">
+            <% number = [10,15,20,25,30].to_a.sample  %>
+            <h5 class="discount-amount mb-0"><%=number%>%</h5>
+          </div>
+        </div>
       </div>
     </div>
   <% end %>

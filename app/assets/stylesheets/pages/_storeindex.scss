@@ -19,11 +19,33 @@ body {
   color: $white;
 }
 
+.map-container {
+  width: 100%;
+  height: 250px;
+}
+
 .store-card {
   background-color: $mint;
   border-radius: 15px;
+  min-width: 290px;
+}
+
+.card-discount-item {
+  background-color: $my-orange;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
 }
 
 .store-image {
-  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  border-radius: 15px;
+}
+
+
+.card-bottom {
+  background-color: white;
+  width: 100%;
+  border-radius: 0px 0px 15px 15px;
 }
