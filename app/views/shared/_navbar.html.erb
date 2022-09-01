@@ -5,7 +5,7 @@
         <i class="fa-solid fa-map-location"></i>
       <% end %>
       <%= link_to root_path do %>
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-house"></i>
       <% end %>
       <%= link_to root_path do %>
         <i class="fa-solid fa-heart"></i>
@@ -16,7 +16,8 @@
         </button>
         <ul class="dropdown-menu">
           <%# <li><%= link_to "My Store", store_path, class: "dropdown-item" %></li>
-          <li><a class="dropdown-item" href="#">My Store</a></li>
+          <li><%= link_to "Favourites", dashboard_path, class: "dropdown-item" %></li>
+          <li><%= link_to "My Stores", dashboard_path, class: "dropdown-item" %></li>
           <li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link", class: "btn btn-sm" %></li>
         </ul>
       </div>

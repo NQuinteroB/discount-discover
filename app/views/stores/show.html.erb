@@ -17,7 +17,7 @@
 
 <div class="btn-container d-flex flex-column">
   <%= link_to "Add Product", new_store_product_path(@store), class: "btn-flat my-3" %>
-  <%= link_to "Show products",store_product_path(@store), class: "btn-ghost my-3" %>
+  <%= link_to "Show products",store_products_path(@store), class: "btn-ghost my-3" %>
       <%#= f.number_field :user_id, id: :store_user_id, class:"form-control", value: current_user.id, type: :hidden %>
   <%= link_to "Delete this store", store_path(@store), class: "btn-danger my-3", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this store?" } %>
   <%= render "products/modal", store: @store, product: @product %>
@@ -25,4 +25,4 @@
 
 </div>
 
-<%= render "shared/navbar" %>
+
