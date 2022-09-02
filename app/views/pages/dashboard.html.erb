@@ -1,18 +1,19 @@
-
-<div class="store-banner d-flex align-items-center mb-3">
-  <%= link_to root_path do %>
-  <i class="fa-solid fa-arrow-left"></i>
-  <% end %>
-  <div class="container d-flex justify-content-center">
-    <h2>Your dashboard </h2>
+<div class="index-container">
+  <div class="store-banner d-flex align-items-center mb-3">
+    <%= link_to root_path do %>
+    <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+    <div class="container d-flex justify-content-center">
+      <h2>Your dashboard </h2>
+    </div>
   </div>
-</div>
 
 
-<div class="container d-flex flex-column position-absolute top-50 start-50 translate-middle">
-  <%= link_to "Edit profile", "#", class: "btn-flat my-3" %>
-  <%= link_to "Favourites","#", class: "btn-flat my-3" %>
-  <%= link_to "My stores", mystores_path, class: "btn-flat my-3" %>
+  <div class="container d-flex flex-column position-absolute top-50 start-50 translate-middle">
+    <%= link_to "Edit profile", "#", class: "btn-flat my-3" %>
+    <%= link_to "Favourites","#", class: "btn-flat my-3" %>
+    <%= link_to "My stores", mystores_path, class: "btn-flat my-3" %>
 
-  <%= link_to "Messages","#", class: "btn-flat my-3" %>
+    <%# <%= link_to "Messages","#", class: "btn-flat my-3" %>
+  </div>
 </div>
