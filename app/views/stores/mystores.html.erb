@@ -1,0 +1,33 @@
+<div class="store-banner d-flex align-items-center mb-3">
+  <%= link_to dashboard_path do %>
+    <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
+  <div class="container d-flex justify-content-center">
+    <h2><i class="fa-solid fa-store mr-3"></i></h2>
+    <h2>My stores</h2>
+    <h2>
+    </h2>
+  </div>
+</div>
+
+  <div class="container py-5">
+    <div class="d-flex align-items-center justify-content-end mb-3">
+      <%= link_to "Create a new store", new_store_path, class: "btn-ghost" %>
+    </div>
+
+<%# position-absolute top-50 start-50 translate-middle %>
+
+<div class= "container position-absolute top-50 start-50 translate-middle ">
+    <div class=" d-flex flex-column mb-3 mt-5">
+      <% current_user.stores.each do |store| %>
+        <%= link_to store_path(store), class:"store-link" do %>
+          <div class="d-flex justify-content-between align-items-center">
+            <%= store.name %>
+            <%= link_to "See store", store_path(store), class: "btn-flat my-3" %>
+          </div>
+        <% end %>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>

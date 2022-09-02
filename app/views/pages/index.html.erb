@@ -34,9 +34,8 @@
         <h5>Discounts up to...</h5>
         <div class="">
           <div class="card-discount-item d-flex flex-column align-items-center justify-content-center">
-            <% number = [10,15,20,25,30].to_a.sample  %>
             <% products = store.products.order(:discount) %>
-            <h5 class="discount-amount mb-0"><%#=#products.last.discount%>%</h5>
+            <h5 class="discount-amount mb-0"><%=products.last.discount%>%</h5>
           </div>
         </div>
       </div>

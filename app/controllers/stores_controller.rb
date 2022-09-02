@@ -7,6 +7,11 @@ class StoresController < ApplicationController
     # @stores = Store.all
   end
 
+  def mystores
+    @stores = Store.where(user_id: current_user)
+    authorize @stores
+  end
+
   def show
     authorize @store
     @product = Product.new
