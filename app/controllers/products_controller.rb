@@ -17,7 +17,6 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     authorize @product
-    #@product = current_user.products.build
   end
 
   def create
@@ -26,7 +25,7 @@ class ProductsController < ApplicationController
     @product.store = @store
     authorize @product
     if @product.save
-      redirect_to store_path(@store)
+      redirect_to store_path(@store), status: :see_other
     else
       render :new, status: :unprocessable_entity
     end
@@ -41,7 +40,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :store_id)
+    params.require(:product).permit(:name, :price, :discount, :description, :photo, :store_id)
   end
 
   def set_product
