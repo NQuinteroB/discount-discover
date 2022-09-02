@@ -3,9 +3,14 @@
   height: 100px;
   background-color: $mint;
   text-align: center;
+  position: relative;
 }
 
-.fa-solid-fa-arrow-left-from-line {
-  font-size: 2em;
+
+.fa-arrow-left {
+  font-size: 24px;
   color: black;
+  position: absolute;
+  top: 16px;
+  left: 20px;
 }
