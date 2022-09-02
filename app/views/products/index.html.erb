@@ -8,15 +8,15 @@
     <%#= link_to "Create a new store", new_product_path, class: "btn btn-flat" %>
   </div>
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="co-12 col-sm-6 col-md-4 mb-3">
-        <%= link_to store_products_path, class:"text-decoration-none text-black" do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%#= store.photo.attached? ? cl_image_path(store.photo.key) : asset_path('store_background.jpg') %>)">
-            <p>Product name: <%= product.name %></p>
+    <<% @products.each do |product| %>
+        <%= link_to store_products_path, class:"store-link" do %>
+          <div class="d-flex justify-content-between align-items-center">
+            <%= product.name %>
+            <%= link_to "See store", store_path(@store), class: "btn-flat my-3" %>
           </div>
         <% end %>
-      </div>
-    <% end %>
+        <hr>
+      <% end %>
   </div>
 </div>
 </div>

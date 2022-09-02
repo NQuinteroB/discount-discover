@@ -1,10 +1,11 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_store, only: [:new, :create]
+  before_action :set_store, only: [:index, :new, :create]
+  skip_after_action :verify_policy_scoped, only: [:index]
 
   def index
-    @products = policy_scope(Product)
+    @products = @store.products
   end
 
   def show

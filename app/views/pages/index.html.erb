@@ -38,6 +38,18 @@
               <% products = store.products.order(:discount) %>
               <h5 class="discount-amount mb-0"><%=products.last.discount%>%</h5>
             </div>
+      <div class="right-info">
+        <%= cl_image_tag store.photo.key, height: 100, crop: :fill, class: "store-image" if store.photo.attached?%>
+      </div>
+    </div>
+      <div class="card-bottom d-flex align-items-center justify-content-between mt-2 py-2 px-4">
+        <h5>Discounts up to...</h5>
+        <div class="">
+          <div class="card-discount-item d-flex flex-column align-items-center justify-content-center">
+            <% number = [10,15,20,25,30].to_a.sample  %>
+            <% products = store.products.order(:discount) %>
+            <h5 class="discount-amount mb-0"><%#=#products.last.discount%>%</h5>
+>>>>>>> e16edfaeb1f1dc851748aeb712052c69f7863b7e
           </div>
         </div>
       </div>
