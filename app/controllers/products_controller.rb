@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    #@product = Product.new(product_params)
+    @product = Product.new(product_params)
     @product=  @store.products.build(product_params)
     @product.store = @store
     authorize @product
