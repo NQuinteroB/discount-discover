@@ -1,24 +1,34 @@
-<div class="container m-5">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-   <h1 class="hello" style="line-height: 2em;">Products Home Page For All Users</h1>
-   <div class="container py-5">
-  <div class="d-flex align-items-center justify-content-between mb-3">
+<div class="index-container">
 
-    <%#= link_to "Create a new store", new_product_path, class: "btn btn-flat" %>
+  <div class="store-banner d-flex align-items-center mb-3">
+    <%= link_to store_path(@store) do %>
+      <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+
+    <div class="container d-flex justify-content-center">
+      <h2>Your products:</h2>
+    </div>
+
   </div>
-  <div class="row">
-    <<% @products.each do |product| %>
-        <%= link_to store_products_path, class:"store-link" do %>
-          <div class="d-flex justify-content-between align-items-center">
-            <%= product.name %>
-            <%= link_to "See store", store_path(@store), class: "btn-flat my-3" %>
-          </div>
-        <% end %>
-        <hr>
+
+
+  <div class="container py-5">
+    <div class="d-flex align-items-center justify-content-end mb-3">
+      <h1>This are the products of your store</h1>
+    </div>
+  </div>
+
+    <div class="container position-absolute top-50 start-50 translate-middle">
+      <% @products.each do |product| %>
+          <%= link_to store_products_path, class:"store-link" do %>
+            <div class="d-flex justify-content-between align-items-center">
+              <%= product.name %>
+              <%# <%= link_to "See store", store_path(@store), class: "btn-flat my-3" %>
+            </div>
+          <% end %>
+          <hr>
       <% end %>
-  </div>
-</div>
-</div>
-</div>
+    </div>
+
+
 </div>
