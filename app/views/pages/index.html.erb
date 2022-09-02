@@ -1,94 +1,95 @@
+<div class="home-color">
+  <h2 class="pt-2 mt-5 mb-4 title-dd">DISCOUNT DISCOVER</h2>
 
-<h2 class="pt-2 mt-5 mb-4 title-dd">DISCOUNT DISCOVER</h2>
+  <div class="discounts-amount d-flex justify-content-around my-5">
+    <%number = 10%>
+    <% (1..4).each do %>
+      <div class="discount-item d-flex align-items-center justify-content-center">
+        <h5 class="discount-amount mb-0"><%=number%>%</h5>
+        <% number += 10 %>
+      </div>
+    <% end %>
+  </div>
 
-<div class="discounts-amount d-flex justify-content-around my-5">
-  <%number = 10%>
-  <% (1..4).each do %>
-    <div class="discount-item d-flex align-items-center justify-content-center">
-      <h5 class="discount-amount mb-0"><%=number%>%</h5>
-      <% number += 10 %>
-    </div>
-  <% end %>
-</div>
+  <div class="map-container mb-5" data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 
-<div class="map-container mb-5" data-controller="map"
-       data-map-markers-value="<%= @markers.to_json %>"
-       data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
-
-<div class="cards-container overflow-auto d-flex mt-5 pt-2">
-  <%@stores.each do |store| %>
-    <div class="store-card pt-3 mx-3">
-    <div class="left-right-info d-flex mx-3">
-      <div class="left-info me-2 d-flex align-items-center">
-        <div>
-          <h4><strong><%= store.name %></strong></h4>
-          <h5><strong>1,5 km</strong></h5>
+  <div class="cards-container overflow-auto d-flex mt-5 pt-2">
+    <%@stores.each do |store| %>
+      <div class="store-card pt-3 mx-3">
+      <div class="left-right-info d-flex mx-3">
+        <div class="left-info me-2 d-flex align-items-center">
+          <div>
+            <h4><strong><%= store.name %></strong></h4>
+            <h5><strong>1,5 km</strong></h5>
+          </div>
+        </div>
+        <div class="right-info">
+          <%= cl_image_tag store.photo.key, height: 100, crop: :fill, class: "store-image" if store.photo.attached?%>
         </div>
       </div>
-      <div class="right-info">
-        <%= cl_image_tag store.photo.key, height: 100, crop: :fill, class: "store-image" if store.photo.attached?%>
-      </div>
-    </div>
-      <div class="card-bottom d-flex align-items-center justify-content-between mt-2 py-2 px-4">
-        <h5>Discounts up to...</h5>
-        <div class="">
-          <div class="card-discount-item d-flex flex-column align-items-center justify-content-center">
-            <% number = [10,15,20,25,30].to_a.sample  %>
-            <% products = store.products.order(:discount) %>
-            <h5 class="discount-amount mb-0"><%=products.last.discount%>%</h5>
+        <div class="card-bottom d-flex align-items-center justify-content-between mt-2 py-2 px-4">
+          <h5>Discounts up to...</h5>
+          <div class="">
+            <div class="card-discount-item d-flex flex-column align-items-center justify-content-center">
+              <% number = [10,15,20,25,30].to_a.sample  %>
+              <% products = store.products.order(:discount) %>
+              <h5 class="discount-amount mb-0"><%=products.last.discount%>%</h5>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+
+
+  <!-- Product item 1 modal popup-->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close product" /></div>
+              <div class="container">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-8">
+                          <div class="modal-body">
+                              <!-- Product details-->
+                              <h2 class="text-uppercase">Store Name</h2>
+                              <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                              <img class="img-fluid d-block mx-auto" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+
+                              <p>Use this area to describe your Store. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                              <ul class="list-inline">
+                                  <li>
+                                      <strong>Address:</strong>
+                                      Boolstr 122
+                                  </li>
+                                  <li>
+                                      <strong>Shop time:</strong>
+                                      5am-8pm
+                                  </li>
+                              </ul>
+                              <button class="btn btn-primary btn-xl text-uppercase">
+
+                                  Open Map for direction
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+          <!-- Footer-->
+          <!-- <footer class="py-5 bg-dark">
+              <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Discount Discovery</p></div>
+                <div class="m-0 text-center text-white">
+                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                          <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                      </div>
+          </footer> -->
 </div>
-
-
-<!-- Product item 1 modal popup-->
-<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close product" /></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Product details-->
-                            <h2 class="text-uppercase">Store Name</h2>
-                            <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                            <img class="img-fluid d-block mx-auto" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-
-                            <p>Use this area to describe your Store. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                            <ul class="list-inline">
-                                <li>
-                                    <strong>Address:</strong>
-                                    Boolstr 122
-                                </li>
-                                <li>
-                                    <strong>Shop time:</strong>
-                                    5am-8pm
-                                </li>
-                            </ul>
-                            <button class="btn btn-primary btn-xl text-uppercase">
-
-                                Open Map for direction
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-        <!-- Footer-->
-        <!-- <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Discount Discovery</p></div>
-              <div class="m-0 text-center text-white">
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-        </footer> -->

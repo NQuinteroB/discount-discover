@@ -6,6 +6,10 @@ class StorePolicy < ApplicationPolicy
     end
   end
 
+  def mystores?
+    true
+  end
+
   def show?
     true
   end

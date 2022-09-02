@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#index"
   get "dashboard", to: "pages#dashboard"
+  get "mystores", to: "stores#mystores"
   resources :stores, only: %i[index new create destroy edit update]
 
   resources :stores, only: %i[show] do
