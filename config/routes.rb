@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :stores, only: %i[show] do
     resources :products
-    resources :reviews, only: %i[index new create destroy]
+    resources :reviews, only: %i[index new create destroy show]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

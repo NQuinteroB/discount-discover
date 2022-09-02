@@ -1,8 +1,14 @@
 class ReviewsController < ApplicationController
-  before_action :set_store, only: [:new, :create]
+  before_action :set_store, only: [:new, :create, :show, :index]
   def index
     @reviews = policy_scope(Review)
+    @store_reviews = @store.reviews
+
   end
+
+    def show
+      authorize @review
+    end
 
   def new
     @review = Review.new
