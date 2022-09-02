@@ -1,4 +1,7 @@
 <div class="store-banner d-flex align-items-center">
+  <%= link_to mystores_path do %>
+    <i class="fa-solid fa-arrow-left"></i>
+  <% end %>
   <div class="container d-flex justify-content-center">
     <h3><i class="fa-solid fa-store mr-3"></i></h3>
     <h3>My store</h3>
@@ -9,12 +12,12 @@
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
         <%= simple_form_for @store do |f| %>
-         <%= f.input :name, placeholder: 'Photo' %>
+          <%= f.input :photo, as: :file %>
           <%= f.input :name, placeholder: 'ShirtShop' %>
           <%= f.input :address, placeholder: 'Bollstr 123,Köln-Germany' %>
-           <%= f.input :opening_hour, placeholder: '09:30' %>
-            <%= f.input :closing_hour, placeholder: '20:00' %>
-             <%= f.number_field :user_id, id: :store_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+          <%= f.input :opening_hour, placeholder: '09:30' %>
+          <%= f.input :closing_hour, placeholder: '20:00' %>
+          <%= f.number_field :user_id, id: :store_user_id, class:"form-control", value: current_user.id, type: :hidden %>
             <!-- Store Logo -->
           <%#= f.input :photo, as: :file %>
 
