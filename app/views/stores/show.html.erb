@@ -1,5 +1,8 @@
 <% if @store.user == current_user %>
 <div class="store-banner d-flex align-items-center mb-3">
+   <%= link_to root_path do %>
+      <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
   <div class="container d-flex justify-content-center">
     <h2><i class="fa-solid fa-store mr-3"></i></h2>
      
@@ -34,7 +37,11 @@
   <div class="card-trip-infos ">
     <div>
       <h2><%= @store.name %></h2>
-      <p> <%= link_to "Reviews", @store_reviews_new_path, class: "btn btn-warning btn-sm" %></p>
+      <p> <%= link_to "Reviews", store_reviews_path(@store), class: "btn btn-warning btn-sm" %></p>
+      <%#= render 'storereview' %>
+      <%# @store.reviews.each do |item| %>
+      <h2><%#= item.content%></h2>
+      <%# end %>
     </div>
    <h3 class="fa-regular fa-heart m-2"> <!-- 👨🏾‍💻 --> </h3>
     <h5 class="rounded-circle ">4.6 km</h5>
