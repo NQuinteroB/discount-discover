@@ -3,7 +3,6 @@ class ReviewsController < ApplicationController
   def index
     @reviews = policy_scope(Review)
     @store_reviews = @store.reviews
-
   end
 
     def show
