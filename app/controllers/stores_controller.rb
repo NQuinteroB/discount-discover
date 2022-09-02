@@ -10,6 +10,7 @@ class StoresController < ApplicationController
   def show
     authorize @store
     @product = Product.new
+    @products = Product.where(store_id: params[:store_id])
   end
 
   def new
