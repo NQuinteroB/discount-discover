@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: "pages#index"
   get "dashboard", to: "pages#dashboard"
   get "favourites", to: "pages#favourites"
+  get "map", to: "pages#map"
   get "mystores", to: "stores#mystores"
   resources :stores, only: %i[index new create destroy edit update]
 

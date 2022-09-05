@@ -20,4 +20,13 @@ class PagesController < ApplicationController
     @stores = current_user.all_favorites
   end
 
+  def map
+    @stores = Store.all
+    @markers = @stores.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
+  end
 end
