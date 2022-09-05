@@ -1,6 +1,17 @@
-<h1>My favourite stores</h1>
+<div class="index-container">
+  <div class="store-banner d-flex align-items-center mb-3">
+    <%= link_to root_path do %>
+    <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+    <div class="container d-flex justify-content-center">
+      <h2><i class="fa-solid fa-heart mr-3"></i></h2>
+      <h2>My favourite stores</h2>
+    </div>
+  </div>
 
-<% @stores.each do |item| %>
-  <% store = Store.find_by(id: item.favoritable_id) %>
-  <h2><%=store.name%> </h2>
-<% end %>
+<div class="card-container px-4 mb-4">
+  <% @stores.each do |item| %>
+    <% store = Store.find_by(id: item.favoritable_id) %>
+    <%= render partial:'cardindex', locals: {store: store} %>
+  <% end %>
+</div>
