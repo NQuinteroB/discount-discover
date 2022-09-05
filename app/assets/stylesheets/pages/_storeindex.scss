@@ -7,8 +7,8 @@
 .discount-item {
   background-color: $my-orange;
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
+  height: 90px;
+  width: 90px;
   box-shadow: 0 0 15px rgba(187, 187, 187, 0.5);
 }
 
@@ -21,7 +21,7 @@
 
 .discount-amount {
   font-family: $headers-font;
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 
@@ -44,8 +44,8 @@
   background-color: $my-blue;
   margin: 0;
   height: 130px;
-  border-radius: 23px;
-  width: 95%;
+
+  width: 100%;
 }
 
 // map
@@ -64,11 +64,11 @@
 }
 
 .store-card {
-  background-color: $white;
   border-radius: 16px;
   min-width: 356px;
   box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.7);
-  width: 95%;
+  width: 100%;
+  margin-bottom: 1.5em;
 }
 
 .card-link {
@@ -91,7 +91,11 @@
 }
 
 .card-bottom {
-  background-color: white;
+  background-color: $mint;
   width: 100%;
   border-radius: 0px 0px 15px 15px;
+}
+
+.fa-clock, .fa-location-dot {
+  color: black;
 }
