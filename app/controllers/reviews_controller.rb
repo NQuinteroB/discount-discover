@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
   def new
     @review = Review.new
     authorize @review
+
   end
 
   def create
@@ -20,7 +21,8 @@ class ReviewsController < ApplicationController
     @review.store_id = @store.id
     authorize @review
     if @review.save
-      redirect_to store_reviews_path(@store)
+      redirect_to store_reviews_path(@store), notice: "Review added 👍", status: :see_other
+      
     else
       render :new, status: :unprocessable_entity
     end

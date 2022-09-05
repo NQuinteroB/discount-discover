@@ -10,13 +10,34 @@
   </div>
 </div>
 
-<div class="d-flex justify-content-end">
-  <%= link_to "Add review", new_store_review_path(@store), class: "btn-ghost my-3 me-5" %>
-</div>
-
 <div class="container d-flex justify-content-center">
   <div class="card-review">
-    <%= render 'stores/storereview' %>
+    <div class="d-flex justify-content-end">
+      <%= link_to new_store_review_path(@store), class: "btn-ghost " do %>
+        <i class="fa-solid fa-plus"></i>
+      <% end %>
+ 
+</div>
+         <div class="list-group p-2">
+        <% @store.reviews.each do |review| %>
+          <li class="list-group-item">
+            <small>
+              <% count = 0 %>
+              <% 5.times do %>
+                <% if review.rating > count %>
+                  <i class="fa-solid fa-star"></i>
+                <% else %>
+                  <i class="fa-regular fa-star"></i>
+                <% end %>
+                <% count += 1 %>
+              <% end %>
+            </small>
+            <p><%= review.content %></p>
+          </li>
+        <% end %>
+      </div>
   <hr>
   </div>
 </div>
+
+
