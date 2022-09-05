@@ -1,0 +1,10 @@
+
+<%@stores.each do |store| %>
+  <%= link_to store_path(store), class: "card-link" do %>
+    <%= cl_image_tag store.photo.key, height: 100, class: "store-image" if store.photo.attached?%>
+      <h4><strong><%= store.name %></strong></h4>
+      <p class="m-0"><%= store.opening_hour %></p>
+      <p class="m-0"><%= store.closing_hour %></p>
+
+  <% end %>
+<% end %>
