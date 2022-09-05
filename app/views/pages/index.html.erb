@@ -1,7 +1,6 @@
 <div class="d-flex flex-column" style="height: 100vh;">
   <div class="index-container flex-grow-1 ">
 
-    <h1 class="pt-2 pt-5 pb-4 title-dd m-0">DISCOUNT DISCOVER</h1>
     <div class="discounts-amount d-flex justify-content-around my-5">
       <%number = 10%>
       <% (1..4).each do %>
@@ -11,26 +10,35 @@
         </div>
       <% end %>
     </div>
-    <div class="map-container mb-4" data-controller="map"
+    <div class="d-flex justify-content-center mb-3">
+    <div class="banner-index d-flex justify-content-center align-items-center">
+      <h1 class='title'>Discount</h1>
+      <img id="logo" src=<%= asset_path('logo.png') %> alt="discount-discover">
+      <h1 class='title'>Discover</h1>
+    </div>
+    </div>
+
+    <div class="map-container" data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
+
     <h3 class="ms-4 me-0 my-0 best-stores">Best rated stores</h3>
-    <div class="cards-container overflow-auto d-flex mt-3 pt-4 pb-2">
+    <div class="container">
       <%@stores.each do |store| %>
         <%= link_to store_path(store), class: "card-link" do %>
-          <div class="store-card pt-3 mx-3">
-          <div class="left-right-info d-flex mx-3">
-            <div class="left-info me-2 d-flex align-items-center">
-              <div>
-                <h4 class="m-0"><strong><%= store.name %></strong></h4>
-                <h5 class="m-0"><strong>1,5 km</strong></h5>
+          <div class="store-card my-3">
+            <div class="left-right-info d-flex flex-column">
+              <div class="top-info mb-3">
+                <%= cl_image_tag store.photo.key, height: 100, class: "store-image" if store.photo.attached?%>
               </div>
+                <div class="card-info m-0 px-3 py-3">
+                  <h4><strong><%= store.name %></strong></h4>
+                  <p><%= store.address %></p>
+                  <h4 class="text-end"><strong>1,5 km</strong></h5>
+                </div>
             </div>
-            <div class="right-info">
-              <%= cl_image_tag store.photo.key, height: 100, class: "store-image" if store.photo.attached?%>
-            </div>
-          </div>
+
             <div class="card-bottom d-flex align-items-center justify-content-between py-2 px-4">
               <h5 class="m-0">Discounts up to...</h5>
               <div class="">
@@ -44,5 +52,9 @@
         <% end %>
       <% end %>
     </div>
+
+    <div class="footer">
+    </div>
+
   </div>
 </div>
