@@ -3,7 +3,12 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
 
   def index
-    @stores = Store.all
+    if params[:query].present?
+        @stores = Store.search_by_name(params[:query])
+      else
+        @stores = Store.all
+      end
+    
     @markers = @stores.geocoded.map do |flat|
       {
         lat: flat.latitude,
