@@ -49,7 +49,7 @@ gem "cloudinary"
 gem "pundit"
 gem "geocoder"
 gem 'acts_as_favoritor'
-gem "pg", "~> 1.1"
+gem "pg_search"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
