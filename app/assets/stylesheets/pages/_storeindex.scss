@@ -21,7 +21,7 @@
 
 .discount-amount {
   font-family: $headers-font;
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 
@@ -44,8 +44,8 @@
   background-color: $my-blue;
   margin: 0;
   height: 130px;
-  border-radius: 23px;
-  width: 95%;
+
+  width: 100%;
 }
 
 // map
@@ -94,4 +94,8 @@
   background-color: $mint;
   width: 100%;
   border-radius: 0px 0px 15px 15px;
+}
+
+.fa-clock, .fa-location-dot {
+  color: black;
 }
