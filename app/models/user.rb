@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :stores
   has_many :reviews
+  acts_as_favoritor
 
   #validates :first_name, :last_name, :username, presence: true
 end

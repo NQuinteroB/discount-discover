@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#index"
   get "dashboard", to: "pages#dashboard"
+  get "favourites", to: "pages#favourites"
   get "mystores", to: "stores#mystores"
   resources :stores, only: %i[index new create destroy edit update]
 
   resources :stores, only: %i[show] do
+    patch :favorite, on: :member
     resources :products
     resources :reviews, only: %i[index new create destroy show]
   end
