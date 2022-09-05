@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
- before_action :set_params, only: %i[destroy edit update show]
+ before_action :set_params, only: %i[destroy edit update show favorite]
  before_action :authenticate_user!
 
   def index
@@ -13,6 +13,7 @@ class StoresController < ApplicationController
   end
 
   def show
+    @user = current_user
     authorize @store
     @product = Product.new
     @products = Product.where(store_id: params[:store_id])
@@ -49,7 +50,15 @@ class StoresController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
 
+  def favorite
+    authorize @store
+    if current_user.favorited?(@store)
+      current_user.unfavorite(@store)
+    else
+      current_user.favorite(@store)
+    end
   end
 
   private

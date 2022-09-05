@@ -1,0 +1,6 @@
+<h1>My favourite stores</h1>
+
+<% @stores.each do |item| %>
+  <% store = Store.find_by(id: item.favoritable_id) %>
+  <h2><%=store.name%> </h2>
+<% end %>

@@ -28,7 +28,7 @@
 <% else %>
   <div class="card-trip rounded-bottom">
     <%= cl_image_tag @store.photo.key, height: 100 %>
-    <div class="card-trip-infos ">
+    <div class="card-trip-infos">
       <div>
         <h2><%= @store.name %></h2>
         <p> <%= link_to "Reviews", store_reviews_path(@store), class: "btn btn-warning btn-sm" %></p>
@@ -37,7 +37,27 @@
         <h2><%#= item.content%></h2>
         <%# end %>
       </div>
-     <h3 class="fa-regular fa-heart m-2"> <!-- :male-technologist::skin-tone-5: --> </h3>
+      <% if current_user.favorited?(@store) %>
+        <%= link_to  favorite_store_path, data: {
+          controller: "favss",
+          action: "click->favss#next",
+          turbo_method: :patch,
+          favss_favoriting_value: false,
+          turbo_track: :reload
+        } do %>
+          <h3 class="red-heart fa-regular fa-heart m-2" data-favss-target="heart"></h3>
+        <% end %>
+      <% else %>
+        <%= link_to  favorite_store_path, data: {
+          controller: "favss",
+          action: "click->favss#next",
+          turbo_method: :patch,
+          favss_favoriting_value: true,
+          turbo_track: :reload
+        } do %>
+          <h3 class="fa-regular fa-heart m-2" data-favss-target="heart"></h3>
+        <% end %>
+      <% end %>
       <h5 class="rounded-circle ">4.6 km</h5>
     </div>
   </div>

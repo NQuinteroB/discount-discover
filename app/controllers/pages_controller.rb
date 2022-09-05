@@ -15,4 +15,9 @@ class PagesController < ApplicationController
   def dashboard
     @user = current_user
   end
+
+  def favourites
+    @stores = current_user.all_favorites
+  end
+
 end
