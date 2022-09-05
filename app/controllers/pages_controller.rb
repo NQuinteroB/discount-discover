@@ -27,10 +27,11 @@ class PagesController < ApplicationController
 
   def map
     @stores = Store.all
-    @markers = @stores.geocoded.map do |flat|
+    @markers = @stores.geocoded.map do |store|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: store.latitude,
+        lng: store.longitude,
+        info_window: render_to_string(partial: "stores/info_window", locals: {store: store})
       }
     end
   end

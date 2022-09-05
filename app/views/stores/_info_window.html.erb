@@ -1,0 +1,11 @@
+<div class="content">
+  <%= link_to store_path(store), class: "link-map" do %>
+    <%= cl_image_tag store.photo.key, class: "store-card-map-img" if store.photo.attached?%>
+    <p class="pt-4 ps-3" style="font-size: 1.4rem;"><%= store.name %></p>
+    <p class="ps-3" style="font-size: 1.2rem;"><%= store.address %></p>
+    <div class="d-flex ps-3">
+      <p style="font-size: 1.2rem;"><%= store.opening_hour.strftime('%l:%M %p') %>-</p>
+      <p style="font-size: 1.2rem;"><%= store.closing_hour.strftime('%l:%M %p') %></p>
+    </div>
+  <% end %>
+</div>
