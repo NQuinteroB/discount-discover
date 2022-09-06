@@ -473,7 +473,7 @@ puts "Products created!!!"
 puts "\n"
 puts "Creating reviews..."
 
-review1 = Review.new (
+review1 = Review.new(
   rating: 3,
   content: "Good",
   user_id: owner.id,
