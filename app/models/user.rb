@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :reviews
   acts_as_favoritor
 
-  #validates :first_name, :last_name, :username, presence: true
+  validates :first_name, :last_name, :username, presence: true
 end
