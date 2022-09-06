@@ -3,7 +3,7 @@
       <%= link_to root_path do %>
         <i class="fa-solid fa-house"></i>
       <% end %>
-      <%= link_to root_path do %>
+      <%= link_to map_path do %>
         <i class="fa-solid fa-map-location"></i>
       <% end %>
       <%= link_to favourites_path do %>
@@ -17,7 +17,7 @@
           <%# <li><%= link_to "My Store", store_path, class: "dropdown-item" %></li>
           <li><%= link_to "My dashboard", dashboard_path, class: "dropdown-item" %></li>
           <li><%= link_to "My favourites", favourites_path, class: "dropdown-item" %></li>
-          <li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link", class: "btn btn-sm" %></li>
+          <li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "nav-link", class: "dropdown-item" %></li>
         </ul>
       </div>
     </div>
