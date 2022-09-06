@@ -83,23 +83,22 @@
 <div class="d-flex align-items-center" style="height: 100%; flex-direction: column;">
   <div class="btn-container d-flex flex-column">
     <div class="cards-container overflow-auto d-flex mt-2 pt-2 ">
-   <% @store.products.each do |product| %>
-    <div class="store-card  p-2 mx-2">
-      <div>
-        <h5><strong><%= product.name %></strong></h5>
-    <%= link_to "more info", store_product_path(product.store_id, product), class: "btn-ghost" %>
-        <% disc = (product.price * product.discount/100).round(2) %>
-        <p><strong>Before: €<span class="text-muted text-decoration-line-through"> <%= product.price %></span> now: € <%= product.price - disc %></strong></p>
-        <hr>
+      <% @store.products.each do |product| %>
+        <div class="store-card  p-2 mx-2">
+          <div>
+            <h5><strong><%= product.name %></strong></h5>
+            <%= link_to "more info", store_product_path(product.store_id, product), class: "btn-ghost" %>
+            <% disc = (product.price * product.discount/100).round(2) %>
+            <p><strong>Before: €<span class="text-muted text-decoration-line-through"> <%= product.price %></span> now: € <%= product.price - disc %></strong></p>
+            <hr>
+          </div>
+          <div>
+            <%= cl_image_tag product.photo.key, height: 100, class: "store-image" %>
+          </div>
+        </div>
       </div>
-      <div>
-        <%= cl_image_tag product.photo.key, height: 100, class: "store-image" %>
-      </div>
-    </div>
-  </div>
-<% end %>
-<div class="footer">
+    <% end %>
+  <div class="footer">
 </div>
-  <%= render "products/modal", store: @store, product: @product %>
-    <%#= link_to "Show products",store_products_path(@store), class: "btn-ghost my-3" %>
-    <%#= f.number_field :user_id, id: :store_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+<%= render "products/modal", store: @store, product: @product %>
+<% end %>

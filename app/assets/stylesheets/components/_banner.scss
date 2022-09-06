@@ -6,6 +6,11 @@
   position: relative;
 }
 
+.store-banner h2 {
+  color: white;
+  font-weight: 500;
+}
+
 .fa-arrow-left {
   font-size: 24px;
   color: rgb(255, 255, 255);
@@ -30,6 +35,6 @@
   height: 90px;
 }
 
-.discount-banner .store-banner > h2 {
+.discount-banner {
   color: white;
 }
