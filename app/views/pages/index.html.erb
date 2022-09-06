@@ -1,18 +1,18 @@
 <div class="d-flex flex-column" style="height: 100vh;">
   <div class="index-container flex-grow-1 ">
 
-<%= render "pages/searchindex" %>
 
-  <div class="d-flex justify-content-center mb-4 mt-4">
+
+
     <div class="banner-index d-flex justify-content-center align-items-center">
         <h1 class='title'>Discount</h1>
         <img id="logo" src=<%= asset_path('logo-white.png') %> alt="discount-discover">
         <h1 class='title'>Discover</h1>
+
     </div>
-  </div>
+<h1 class="fixed-top"><%= render "pages/searchindex" %></h1>
 
-
-   <div class="discounts-amount d-flex justify-content-around my-5">
+   <div class="discounts-amount d-flex justify-content-around m-2">
       <%= link_to map_path(:discount => 15), style:"text-decoration: none;" do %>
         <div class="discount-item d-flex align-items-center justify-content-center">
           <h5 class="discount-amount m-0"><%=15%>%</h5>
