@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_store, only: [:index, :new, :create]
+  before_action :set_store, only: [:index, :show, :new, :create]
   skip_after_action :verify_policy_scoped, only: [:index]
 
   def index
