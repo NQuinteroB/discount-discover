@@ -481,7 +481,7 @@ review1 = Review.new(
 )
 review1.save!
 
-review2 = Review.new (
+review2 = Review.new(
   rating: 4,
   content: "g",
   user_id: owner.id,
@@ -489,7 +489,7 @@ review2 = Review.new (
 )
 review2.save!
 
-review3 = Review.new (
+review3 = Review.new(
   rating: 5,
   content: "g",
   user_id: owner.id,
@@ -497,7 +497,7 @@ review3 = Review.new (
 )
 review3.save!
 
-review4 = Review.new (
+review4 = Review.new(
   rating: 4,
   content: "g",
   user_id: owner.id,
@@ -505,7 +505,7 @@ review4 = Review.new (
 )
 review4.save!
 
-review5 = Review.new (
+review5 = Review.new(
   rating: 1,
   content: "g",
   user_id: owner.id,
@@ -513,7 +513,7 @@ review5 = Review.new (
 )
 review5.save!
 
-review6 = Review.new (
+review6 = Review.new(
   rating: 3,
   content: "Good",
   user_id: owner.id,
@@ -521,7 +521,7 @@ review6 = Review.new (
 )
 review6.save!
 
-review7 = Review.new (
+review7 = Review.new(
   rating: 2,
   content: "g",
   user_id: owner.id,
@@ -529,7 +529,7 @@ review7 = Review.new (
 )
 review7.save!
 
-review8 = Review.new (
+review8 = Review.new(
   rating: 1,
   content: "g",
   user_id: owner.id,
@@ -537,7 +537,7 @@ review8 = Review.new (
 )
 review8.save!
 
-review9 = Review.new (
+review9 = Review.new(
   rating: 2,
   content: "g",
   user_id: owner.id,
@@ -545,7 +545,7 @@ review9 = Review.new (
 )
 review9.save!
 
-review10 = Review.new (
+review10 = Review.new(
   rating: 3,
   content: "g",
   user_id: owner.id,
@@ -553,7 +553,7 @@ review10 = Review.new (
 )
 review10.save!
 
-review11 = Review.new (
+review11 = Review.new(
   rating: 4,
   content: "Good",
   user_id: owner.id,
@@ -561,7 +561,7 @@ review11 = Review.new (
 )
 review11.save!
 
-review12 = Review.new (
+review12 = Review.new(
   rating: 5,
   content: "g",
   user_id: owner.id,
@@ -569,7 +569,7 @@ review12 = Review.new (
 )
 review12.save!
 
-review13 = Review.new (
+review13 = Review.new(
   rating: 4,
   content: "g",
   user_id: owner.id,
@@ -577,7 +577,7 @@ review13 = Review.new (
 )
 review13.save!
 
-review14 = Review.new (
+review14 = Review.new(
   rating: 3,
   content: "g",
   user_id: owner.id,
@@ -585,7 +585,7 @@ review14 = Review.new (
 )
 review14.save!
 
-review15 = Review.new (
+review15 = Review.new(
   rating: 2,
   content: "g",
   user_id: owner.id,
@@ -593,7 +593,7 @@ review15 = Review.new (
 )
 review15.save!
 
-review16 = Review.new (
+review16 = Review.new(
   rating: 1,
   content: "Good",
   user_id: owner.id,
@@ -601,7 +601,7 @@ review16 = Review.new (
 )
 review16.save!
 
-review17 = Review.new (
+review17 = Review.new(
   rating: 2,
   content: "g",
   user_id: owner.id,
@@ -609,7 +609,7 @@ review17 = Review.new (
 )
 review17.save!
 
-review18 = Review.new (
+review18 = Review.new(
   rating: 3,
   content: "g",
   user_id: owner.id,
@@ -617,7 +617,7 @@ review18 = Review.new (
 )
 review18.save!
 
-review19 = Review.new (
+review19 = Review.new(
   rating: 4,
   content: "g",
   user_id: owner.id,
@@ -625,7 +625,7 @@ review19 = Review.new (
 )
 review19.save!
 
-review20 = Review.new (
+review20 = Review.new(
   rating: 5,
   content: "g",
   user_id: owner.id,
