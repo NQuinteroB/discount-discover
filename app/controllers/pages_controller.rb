@@ -25,7 +25,7 @@ class PagesController < ApplicationController
       @stores_show << store if store.products.first.discount >= params[:discount].to_i
     end
 
-    @markers = @stores.geocoded.map do |store|
+    @markers = @stores_show.map do |store|
       {
         lat: store.latitude,
         lng: store.longitude,
