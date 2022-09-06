@@ -33,7 +33,7 @@
     <% end %>
     </div>
 
-    <div class="discount-item d-flex  align-items-center justify-content-center">
+    <div class="discount-item-store d-flex  align-items-center justify-content-center">
         <% products = @store.products.order(:discount) %>
         <p class="discount-amount m-0"><%=products.first.discount%>-<%=products.last.discount%>%</p>
     </div>
