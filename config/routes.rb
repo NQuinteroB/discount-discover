@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "favourites", to: "pages#favourites"
   get "map", to: "pages#map"
   get "mystores", to: "stores#mystores"
+  get "stores", to: "pages#index"
   resources :stores, only: %i[index new create destroy edit update]
 
   resources :stores, only: %i[show] do

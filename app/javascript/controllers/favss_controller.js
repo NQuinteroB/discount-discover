@@ -12,10 +12,12 @@ export default class extends Controller {
     console.log("clicked")
     if (this.favoritingValue) {
       console.log(this.heartTarget)
+      this.heartTarget.classList.remove("no-red-heart")
       this.heartTarget.classList.add("red-heart")
     } else {
       console.log(this.heartTarget)
       this.heartTarget.classList.remove("red-heart")
+      this.heartTarget.classList.add("no-red-heart")
     }
   }
 }
