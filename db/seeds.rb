@@ -291,8 +291,8 @@ puts "Creating products..."
 
 product1 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 10.50,
+  discount: 25,
   store_id: store1.id
 )
 product1.photo.attach(io: primark_product , filename: "primark_product.png", content_type: "image/png")
@@ -301,16 +301,16 @@ product1.save!
 product2 = Product.new(
   name: "producto1",
   price: 34,
-  discount: 30,
+  discount: 15,
   store_id: store2.id
 )
 product2.photo.attach(io: hm_product , filename: "hm_product.png", content_type: "image/png")
 product2.save!
 
 product3 = Product.new(
-  name: "producto1",
-  price: 34,
-  discount: 30,
+  name: "Socks",
+  price: 40.85,
+  discount: 50,
   store_id: store3.id
 )
 product3.photo.attach(io: depot_product , filename: "depot_product.png", content_type: "image/png")
@@ -318,8 +318,8 @@ product3.save!
 
 product4 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 18.95,
+  discount: 15,
   store_id: store4.id
 )
 product4.photo.attach(io: steiff_product , filename: "steiff_product.png", content_type: "image/png")
@@ -327,8 +327,8 @@ product4.save!
 
 product5 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 80.75,
+  discount: 25,
   store_id: store5.id
 )
 product5.photo.attach(io: lacoste_product , filename: "lacoste_product.png", content_type: "image/png")
@@ -336,8 +336,8 @@ product5.save!
 
 product6 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 35.85,
+  discount: 35,
   store_id: store6.id
 )
 product6.photo.attach(io: zarahome_product , filename: "zarahome_product.png", content_type: "image/png")
@@ -345,8 +345,8 @@ product6.save!
 
 product7 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 90.50,
+  discount: 45,
   store_id: store7.id
 )
 product7.photo.attach(io: overkill_product , filename: "overkill_product.png", content_type: "image/png")
@@ -354,8 +354,8 @@ product7.save!
 
 product8 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 60.35,
+  discount: 20,
   store_id: store8.id
 )
 product8.photo.attach(io: butler_product , filename: "butler_product.png", content_type: "image/png")
@@ -363,8 +363,8 @@ product8.save!
 
 product9 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 50,
+  discount: 15,
   store_id: store9.id
 )
 product9.photo.attach(io: optik_product , filename: "optik_product.png", content_type: "image/png")
@@ -372,8 +372,8 @@ product9.save!
 
 product10 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 12.60,
+  discount: 15,
   store_id: store10.id
 )
 product10.photo.attach(io: vintage_product , filename: "vintage_product.png", content_type: "image/png")
@@ -381,8 +381,8 @@ product10.save!
 
 product11 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 80.75,
+  discount: 40,
   store_id: store11.id
 )
 product11.photo.attach(io: boogs_product , filename: "boogs_product.png", content_type: "image/png")
@@ -390,8 +390,8 @@ product11.save!
 
 product12 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 60.60,
+  discount: 25,
   store_id: store12.id
 )
 product12.photo.attach(io: icrush_product , filename: "icrush_product.png", content_type: "image/png")
@@ -408,8 +408,8 @@ product13.save!
 
 product14 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 60.75,
+  discount: 35,
   store_id: store14.id
 )
 product14.photo.attach(io: whisky_product , filename: "whisky_product.png", content_type: "image/png")
@@ -417,7 +417,7 @@ product14.save!
 
 product15 = Product.new(
   name: "producto1",
-  price: 34,
+  price: 20.25,
   discount: 30,
   store_id: store15.id
 )
@@ -426,8 +426,8 @@ product15.save!
 
 product16 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 40.85,
+  discount: 50,
   store_id: store16.id
 )
 product16.photo.attach(io: dufthaus_product , filename: "dufthaus_product.png", content_type: "image/png")
@@ -435,8 +435,8 @@ product16.save!
 
 product17 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 78,
+  discount: 55,
   store_id: store17.id
 )
 product17.photo.attach(io: ca_product , filename: "ca_product.png", content_type: "image/png")
@@ -444,8 +444,8 @@ product17.save!
 
 product18 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 32.80,
+  discount: 20,
   store_id: store18.id
 )
 product18.photo.attach(io: bershka_product , filename: "bershka_product.png", content_type: "image/png")
@@ -453,8 +453,8 @@ product18.save!
 
 product19 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 44.50,
+  discount: 40,
   store_id: store19.id
 )
 product19.photo.attach(io: calvin_product , filename: "calvin_product.png", content_type: "image/png")
@@ -462,8 +462,8 @@ product19.save!
 
 product20 = Product.new(
   name: "producto1",
-  price: 34,
-  discount: 30,
+  price: 85,
+  discount: 50,
   store_id: store20.id
 )
 product20.photo.attach(io: sport_product , filename: "sport_product.png", content_type: "image/png")
