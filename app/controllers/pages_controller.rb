@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index ]
 
   def index
-    if params[:query].present?
+  if params[:query].present?
         @stores = Store.search_by_name(params[:query])
       else
         @stores = Store.all
