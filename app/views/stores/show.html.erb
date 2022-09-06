@@ -1,80 +1,91 @@
-<% if @store.user == current_user %>
-<div class="store-banner d-flex align-items-center mb-3">
-   <%= link_to root_path do %>
-      <i class="fa-solid fa-arrow-left"></i>
-    <% end %>
-  <div class="container d-flex justify-content-center">
-    <h2><i class="fa-solid fa-store mr-3"></i></h2>
-    <h2>My store</h2>
-  </div>
-</div>
-<div class="d-flex align-items-center" style="height: 100%; flex-direction: column;">
-<div class="container d-flex flex-column my-5">
-    <h2 class="text-center"><%= @store.name %></h2>
-    <div class="d-flex align-items-center my-3">
-      <span class="text-center"><em class="text-muted"><%= "You dont have create any products yet. Start now!" if @store.products.empty? %></em></span>
-    </div>
-      <!--  <button type="button" class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#new_cate_modal"> Add a product
-      </button> -->
-</div>
-<div class="btn-container d-flex flex-column">
-  <%= link_to "Add Product", new_store_product_path(@store), class: "btn-flat my-3", data: {turbo: false} %>
-  <%= link_to "Show products",store_products_path(@store), class: "btn-ghost my-3" %>
-      <%#= f.number_field :user_id, id: :store_user_id, class:"form-control", value: current_user.id, type: :hidden %>
-  <%= link_to "Delete this store", store_path(@store), class: "btn-danger my-3", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this store?" } %>
-  <%= render "products/modal", store: @store, product: @product %>
-</div>
-</div>
-<% else %>
-  <div class="card-trip rounded-bottom">
-    <%= cl_image_tag @store.photo.key, height: 100 %>
-    <div class="card-trip-infos py-3 px-3">
-
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h2><%= @store.name %></h2>
-       <% if current_user.favorited?(@store) %>
-        <%= link_to  favorite_store_path, data: {
-          controller: "favss",
-          action: "click->favss#next",
-          turbo_method: :patch,
-          favss_favoriting_value: false,
-          turbo_track: :reload
-        } do %>
-          <h3 class="red-heart fa-regular fa-heart m-2" data-favss-target="heart"></h3>
-        <% end %>
-      <% else %>
-        <%= link_to  favorite_store_path, data: {
-          controller: "favss",
-          action: "click->favss#next",
-          turbo_method: :patch,
-          favss_favoriting_value: true,
-          turbo_track: :reload
-        } do %>
-          <h3 class="fa-regular fa-heart m-2" data-favss-target="heart"></h3>
-        <% end %>
+  <% if @store.user == current_user %>
+  <div class="store-banner d-flex align-items-center mb-3">
+    <%= link_to root_path do %>
+        <i class="fa-solid fa-arrow-left"></i>
       <% end %>
-      </div>
-      <div class='d-flex justify-content-between align-items-center mb-3'>
-        <%= link_to "Reviews", store_reviews_path(@store), class: "btn-ghost" %>
-        <%= link_to "Navigate me there", "https://www.google.com/maps/dir/?api=1&destination=#{@store.latitude}%2C#{@store.longitude}&dir_action=navigate", class:"card-link btn-flat" %>
-      </div>
-
-      <%# <h5 class="rounded-circle ">4.6 km</h5> %>
+    <div class="container d-flex justify-content-center">
+      <h2><i class="fa-solid fa-store mr-3"></i></h2>
+      <h2>My store</h2>
     </div>
   </div>
-</div>
-</div>
+  <div class="d-flex align-items-center" style="height: 100%; flex-direction: column;">
+  <div class="container d-flex flex-column my-5">
+      <h2 class="text-center"><%= @store.name %></h2>
+      <div class="d-flex align-items-center my-3">
+        <span class="text-center"><em class="text-muted"><%= "You dont have create any products yet. Start now!" if @store.products.empty? %></em></span>
+      </div>
+        <!--  <button type="button" class="btn btn-flat" data-bs-toggle="modal" data-bs-target="#new_cate_modal"> Add a product
+        </button> -->
+  </div>
+  <div class="btn-container d-flex flex-column">
+    <%= link_to "Add Product", new_store_product_path(@store), class: "btn-flat my-3", data: {turbo: false} %>
+    <%= link_to "Show products",store_products_path(@store), class: "btn-ghost my-3" %>
+        <%#= f.number_field :user_id, id: :store_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+    <%= link_to "Delete this store", store_path(@store), class: "btn-danger my-3", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this store?" } %>
+    <%= render "products/modal", store: @store, product: @product %>
+  </div>
+  </div>
+  <% else %>
+    <div class="card-trip rounded-bottom">
+    <div class="d-flex align-items-center">
+      <%= link_to dashboard_path do %>
+    <i class="fa-solid fa-arrow-left"></i>
+    <% end %>
+    </div>
 
+    <div class="discount-item d-flex  align-items-center justify-content-center">
+        <% products = @store.products.order(:discount) %>
+        <p class="discount-amount m-0"><%=products.first.discount%>-<%=products.last.discount%>%</p>
+    </div>
+
+      <%= cl_image_tag @store.photo.key, height: 100 %>
+      <div class="card-trip-infos py-3 px-3">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5><strong><%= @store.name %></strong></h5>
+          <%= link_to "Reviews", store_reviews_path(@store), class: "btn-ghost" %>
+        </div>
+        <div class='d-flex justify-content-between align-items-center mb-3'>
+        <% if current_user.favorited?(@store) %>
+          <%= link_to  favorite_store_path, data: {
+            controller: "favss",
+            action: "click->favss#next",
+            turbo_method: :patch,
+            favss_favoriting_value: false,
+            turbo_track: :reload
+          } do %>
+            <h3 class="red-heart fa-regular fa-heart m-2" data-favss-target="heart"></h3>
+          <% end %>
+        <% else %>
+          <%= link_to  favorite_store_path, data: {
+            controller: "favss",
+            action: "click->favss#next",
+            turbo_method: :patch,
+            favss_favoriting_value: true,
+            turbo_track: :reload
+          } do %>
+            <h3 class="no-red-heart fa-regular fa-heart m-2" data-favss-target="heart"></h3>
+          <% end %>
+        <% end %>
+        <%= link_to "Navigate me there", "https://www.google.com/maps/dir/?api=1&destination=#{@store.latitude}%2C#{@store.longitude}&dir_action=navigate", class:"card-link btn-flat" %>
+        </div>
+
+        <%# <h5 class="rounded-circle ">4.6 km</h5> %>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
 
 <div class="d-flex align-items-center" style="height: 100%; flex-direction: column;">
   <div class="btn-container d-flex flex-column">
-    <div class="cards-container overflow-auto d-flex mt-2 pt-2 ">
+    <div class="cards-container overflow-auto d-flex mt-2 pt-5 ">
    <% @store.products.each do |product| %>
     <div class="store-card  p-2 mx-2">
       <div>
         <p><strong><%= product.name %></strong></p>
-        <p><strong>$<span class="text-muted text-decoration-line-through"> <%= product.price %></span> <%= product.discount %></strong></p>
-        <div class="badge bg-dark text-blue position-absolute" style="top: 0.5rem; right: 0.5rem">20-70%</div>
+        <% disc = (product.price * product.discount/100).round(2) %>
+        <p><strong>€<span class="text-muted text-decoration-line-through"> <%= product.price %></span> <%= product.price - disc %></strong></p>
         <hr>
       </div>
       <div>
