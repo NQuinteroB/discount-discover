@@ -11,11 +11,24 @@
   </div>
 
    <div class="discounts-amount d-flex justify-content-around my-5">
-      <%number = 10%>
-      <% (1..4).each do %>
+      <%= link_to map_path(:discount => 15), style:"text-decoration: none;" do %>
         <div class="discount-item d-flex align-items-center justify-content-center">
-          <h5 class="discount-amount m-0"><%=number%>%</h5>
-          <% number += 10 %>
+          <h5 class="discount-amount m-0"><%=15%>%</h5>
+        </div>
+      <% end %>
+    <%= link_to map_path(:discount => 30), style:"text-decoration: none;" do %>
+        <div class="discount-item d-flex align-items-center justify-content-center">
+          <h5 class="discount-amount m-0"><%=30%>%</h5>
+        </div>
+      <% end %>
+    <%= link_to map_path(:discount => 40), style:"text-decoration: none;" do %>
+        <div class="discount-item d-flex align-items-center justify-content-center">
+          <h5 class="discount-amount m-0"><%=40%>%</h5>
+        </div>
+      <% end %>
+    <%= link_to map_path(:discount => 50), style:"text-decoration: none;" do %>
+        <div class="discount-item d-flex align-items-center justify-content-center">
+          <h5 class="discount-amount m-0"><%=50%>%</h5>
         </div>
       <% end %>
   </div>

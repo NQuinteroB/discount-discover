@@ -13,7 +13,7 @@
       <div class="d-flex">
         <div class="d-flex flex-row align-items-center justify-content-between">
           <p><i class="fa-sharp fa-solid fa-location-dot"></i></p>
-          <p class="ms-4"><%= store.address %></p>
+          <p class="ms-4"><%= link_to store.address, "https://www.google.com/maps/dir/?api=1&destination=#{store.latitude}%2C#{store.longitude}&dir_action=navigate", class:"card-link" %></p>
         </div>
       </div>
 
