@@ -9,7 +9,7 @@
   border-radius: 50%;
   height: 90px;
   width: 90px;
-  box-shadow: 0 0 15px rgba(187, 187, 187, 0.5);
+  box-shadow: 0 12px 12px rgba(187, 187, 187, 0.5);
 }
 
 .discount-item:hover {
@@ -101,5 +101,18 @@
   color: black;
   width: 2rem;
   text-align: center;
+}
+
+
+.form-control {
+  border-radius: 6px;
+  width: 100%;
+  margin-right: 16px;
+  background-color: white;
+  border: 1px solid $mint;
+  box-shadow: 4px 2px 20px 0px rgba(149, 157, 165, 0.2);
+}
+.container {
+  background-color: white;
 
 }
