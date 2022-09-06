@@ -473,164 +473,164 @@ puts "Products created!!!"
 puts "\n"
 puts "Creating reviews..."
 
-review1 = Review.new {
+review1 = Review.new (
   rating: 3,
   content: "Good",
   user_id: owner.id,
   store_id: store1.id
-}
+)
 review1.save!
 
-review2 = Review.new {
+review2 = Review.new (
   rating: 4,
   content: "g",
   user_id: owner.id,
   store_id: store2.id
-}
+)
 review2.save!
 
-review3 = Review.new {
+review3 = Review.new (
   rating: 5,
   content: "g",
   user_id: owner.id,
   store_id: store3.id
-}
+)
 review3.save!
 
-review4 = Review.new {
+review4 = Review.new (
   rating: 4,
   content: "g",
   user_id: owner.id,
   store_id: store4.id
-}
+)
 review4.save!
 
-review5 = Review.new {
+review5 = Review.new (
   rating: 1,
   content: "g",
   user_id: owner.id,
   store_id: store5.id
-}
+)
 review5.save!
 
-review6 = Review.new {
+review6 = Review.new (
   rating: 3,
   content: "Good",
   user_id: owner.id,
   store_id: store6.id
-}
+)
 review6.save!
 
-review7 = Review.new {
+review7 = Review.new (
   rating: 2,
   content: "g",
   user_id: owner.id,
   store_id: store7.id
-}
+)
 review7.save!
 
-review8 = Review.new {
+review8 = Review.new (
   rating: 1,
   content: "g",
   user_id: owner.id,
   store_id: store8.id
-}
+)
 review8.save!
 
-review9 = Review.new {
+review9 = Review.new (
   rating: 2,
   content: "g",
   user_id: owner.id,
   store_id: store9.id
-}
+)
 review9.save!
 
-review10 = Review.new {
+review10 = Review.new (
   rating: 3,
   content: "g",
   user_id: owner.id,
   store_id: store10.id
-}
+)
 review10.save!
 
-review11 = Review.new {
+review11 = Review.new (
   rating: 4,
   content: "Good",
   user_id: owner.id,
   store_id: store11.id
-}
+)
 review11.save!
 
-review12 = Review.new {
+review12 = Review.new (
   rating: 5,
   content: "g",
   user_id: owner.id,
   store_id: store12.id
-}
+)
 review12.save!
 
-review13 = Review.new {
+review13 = Review.new (
   rating: 4,
   content: "g",
   user_id: owner.id,
   store_id: store13.id
-}
+)
 review13.save!
 
-review14 = Review.new {
+review14 = Review.new (
   rating: 3,
   content: "g",
   user_id: owner.id,
   store_id: store14.id
-}
+)
 review14.save!
 
-review15 = Review.new {
+review15 = Review.new (
   rating: 2,
   content: "g",
   user_id: owner.id,
   store_id: store15.id
-}
+)
 review15.save!
 
-review16 = Review.new {
+review16 = Review.new (
   rating: 1,
   content: "Good",
   user_id: owner.id,
   store_id: store16.id
-}
+)
 review16.save!
 
-review17 = Review.new {
+review17 = Review.new (
   rating: 2,
   content: "g",
   user_id: owner.id,
   store_id: store17.id
-}
+)
 review17.save!
 
-review18 = Review.new {
+review18 = Review.new (
   rating: 3,
   content: "g",
   user_id: owner.id,
   store_id: store18.id
-}
+)
 review18.save!
 
-review19 = Review.new {
+review19 = Review.new (
   rating: 4,
   content: "g",
   user_id: owner.id,
   store_id: store19.id
-}
+)
 review19.save!
 
-review20 = Review.new {
+review20 = Review.new (
   rating: 5,
   content: "g",
   user_id: owner.id,
   store_id: store20.id
-}
+)
 review20.save!
 
 
