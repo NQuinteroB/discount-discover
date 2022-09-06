@@ -8,13 +8,6 @@ class PagesController < ApplicationController
       else
         @stores = Store.all
       end
-    
-    @markers = @stores.geocoded.map do |flat|
-      {
-        lat: flat.latitude,
-        lng: flat.longitude
-      }
-    end
   end
 
   def dashboard
@@ -27,6 +20,11 @@ class PagesController < ApplicationController
 
   def map
     @stores = Store.all
+    @stores_show = []
+    @stores.each do |store|
+      @stores_show << store if store.products.first.discount >= params[:discount].to_i
+    end
+
     @markers = @stores.geocoded.map do |store|
       {
         lat: store.latitude,
