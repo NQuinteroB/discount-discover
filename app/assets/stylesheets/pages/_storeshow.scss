@@ -2,6 +2,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 
@@ -18,13 +19,6 @@
   font-family: $headers-font;
   margin: 0;
 }
-
-.card-trip p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
 
 .card-trip .card-trip-infos {
   height: 136px;
@@ -44,7 +38,24 @@
   color:white
 }
 
-.fa-heart {
+.red-heart {
   color: rgb(130, 33, 33);
-  font-size: 1.5em;
+  font-size: 24px;
+}
+
+.no-red-heart {
+  color: rgb(127, 127, 127);
+  font-size: 24px;
+}
+
+.discount-item {
+  background-color: $my-orange;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  font-size: 16px;
+  top: 16px;
+  right: 20px;
+
 }
