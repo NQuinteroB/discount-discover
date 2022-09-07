@@ -66,7 +66,7 @@ sport_product = URI.open("https://tienda.clubdeportivotenerife.es/124-thickbox_d
 
 store1 = Store.new(
   name: "Primark",
-  address: "Neumarkt Galerie, Neumarkt 2-4, 50667 Köln",
+  address: "Hillscheider Weg 10, 50667 Köln",
   opening_hour: "10:00",
   closing_hour: "21:00",
   user_id: owner.id
@@ -88,7 +88,7 @@ store2.save!
 
 store3 = Store.new(
   name: "DEPOT",
-  address: "Neumarkt 8-10, 50667 Köln",
+  address: "Hornstraße 85, 50823 Köln",
   opening_hour: "09:30",
   closing_hour: "20:00",
   user_id: owner.id
@@ -99,7 +99,7 @@ store3.save!
 
 store4 = Store.new(
   name: "Steiff Shop Köln",
-  address: "Neumarktpassage Neumarkt 18-20, 50667 Köln",
+  address: "Weidengasse 62, 50668 Köln",
   opening_hour: "10:00",
   closing_hour: "19:00",
   user_id: owner.id
@@ -140,6 +140,17 @@ store7 = Store.new(
 
 store7.photo.attach(io: overkill_store, filename: "overkill.png", content_type: "image/png")
 store7.save!
+
+store20 = Store.new(
+  name: "SportScheck",
+  address: "Schildergasse 38-42, 50667 Köln",
+  opening_hour: "10:00",
+  closing_hour: "20:00",
+  user_id: owner.id
+)
+
+store20.photo.attach(io: sport_store, filename: "sport.png", content_type: "image/png")
+store20.save!
 
 store8 = Store.new(
   name: "BUTLERS",
@@ -273,16 +284,7 @@ store19 = Store.new(
 store19.photo.attach(io: calvin_store , filename: "calvin.png", content_type: "image/png")
 store19.save!
 
-store20 = Store.new(
-  name: "SportScheck",
-  address: "Schildergasse 38-42, 50667 Köln",
-  opening_hour: "10:00",
-  closing_hour: "20:00",
-  user_id: owner.id
-)
 
-store20.photo.attach(io: sport_store, filename: "sport.png", content_type: "image/png")
-store20.save!
 
 puts "Stores created!!!"
 puts "\n"
@@ -290,7 +292,8 @@ puts "Creating products..."
 
 
 product1 = Product.new(
-  name: "producto1",
+  name: "Socks",
+  description: "Adidas socks for doing sport.",
   price: 10.50,
   discount: 25,
   store_id: store1.id
@@ -299,7 +302,8 @@ product1.photo.attach(io: primark_product , filename: "primark_product.png", con
 product1.save!
 
 product2 = Product.new(
-  name: "producto1",
+  name: "Sweater",
+  description: "Funny mushroom swaeter.",
   price: 34,
   discount: 15,
   store_id: store2.id
@@ -308,7 +312,8 @@ product2.photo.attach(io: hm_product , filename: "hm_product.png", content_type:
 product2.save!
 
 product3 = Product.new(
-  name: "Socks",
+  name: "Skincare set",
+  description: "Best skincare set in the market. Ideal for travel.",
   price: 40.85,
   discount: 50,
   store_id: store3.id
@@ -317,7 +322,8 @@ product3.photo.attach(io: depot_product , filename: "depot_product.png", content
 product3.save!
 
 product4 = Product.new(
-  name: "producto1",
+  name: "Teddy Bear",
+  description: "50cm tall teddy bear for kids.",
   price: 18.95,
   discount: 15,
   store_id: store4.id
@@ -326,7 +332,8 @@ product4.photo.attach(io: steiff_product , filename: "steiff_product.png", conte
 product4.save!
 
 product5 = Product.new(
-  name: "producto1",
+  name: "Polo shirt",
+  description: "Special edition Lacoste x Nike",
   price: 80.75,
   discount: 25,
   store_id: store5.id
@@ -335,7 +342,8 @@ product5.photo.attach(io: lacoste_product , filename: "lacoste_product.png", con
 product5.save!
 
 product6 = Product.new(
-  name: "producto1",
+  name: "Air freshener",
+  description: "Incense air freshener for any room at your home.",
   price: 35.85,
   discount: 35,
   store_id: store6.id
@@ -344,7 +352,8 @@ product6.photo.attach(io: zarahome_product , filename: "zarahome_product.png", c
 product6.save!
 
 product7 = Product.new(
-  name: "producto1",
+  name: "Oversize hoodie",
+  description: "Overkill oversize hoodie",
   price: 90.50,
   discount: 45,
   store_id: store7.id
@@ -353,7 +362,8 @@ product7.photo.attach(io: overkill_product , filename: "overkill_product.png", c
 product7.save!
 
 product8 = Product.new(
-  name: "producto1",
+  name: "Suit hanger",
+  description: "Super useful for keeping your suit wrinkle-free.",
   price: 60.35,
   discount: 20,
   store_id: store8.id
@@ -362,7 +372,8 @@ product8.photo.attach(io: butler_product , filename: "butler_product.png", conte
 product8.save!
 
 product9 = Product.new(
-  name: "producto1",
+  name: "Eye contact lentels",
+  description: "",
   price: 50,
   discount: 15,
   store_id: store9.id
@@ -372,6 +383,7 @@ product9.save!
 
 product10 = Product.new(
   name: "producto1",
+  description: "",
   price: 12.60,
   discount: 15,
   store_id: store10.id
@@ -381,6 +393,7 @@ product10.save!
 
 product11 = Product.new(
   name: "producto1",
+  description: "",
   price: 80.75,
   discount: 40,
   store_id: store11.id
@@ -390,6 +403,7 @@ product11.save!
 
 product12 = Product.new(
   name: "producto1",
+  description: "",
   price: 60.60,
   discount: 25,
   store_id: store12.id
@@ -399,6 +413,7 @@ product12.save!
 
 product13 = Product.new(
   name: "producto1",
+  description: "",
   price: 34,
   discount: 30,
   store_id: store13.id
@@ -408,6 +423,7 @@ product13.save!
 
 product14 = Product.new(
   name: "producto1",
+  description: "",
   price: 60.75,
   discount: 35,
   store_id: store14.id
@@ -417,6 +433,7 @@ product14.save!
 
 product15 = Product.new(
   name: "producto1",
+  description: "",
   price: 20.25,
   discount: 30,
   store_id: store15.id
@@ -426,6 +443,7 @@ product15.save!
 
 product16 = Product.new(
   name: "producto1",
+  description: "",
   price: 40.85,
   discount: 50,
   store_id: store16.id
@@ -435,6 +453,7 @@ product16.save!
 
 product17 = Product.new(
   name: "producto1",
+  description: "",
   price: 78,
   discount: 55,
   store_id: store17.id
@@ -444,6 +463,7 @@ product17.save!
 
 product18 = Product.new(
   name: "producto1",
+  description: "",
   price: 32.80,
   discount: 20,
   store_id: store18.id
@@ -453,6 +473,7 @@ product18.save!
 
 product19 = Product.new(
   name: "producto1",
+  description: "",
   price: 44.50,
   discount: 40,
   store_id: store19.id
@@ -461,7 +482,8 @@ product19.photo.attach(io: calvin_product , filename: "calvin_product.png", cont
 product19.save!
 
 product20 = Product.new(
-  name: "producto1",
+  name: "CD Tenerife official shirt.",
+  description: "Centenery commemoration shirt.",
   price: 85,
   discount: 50,
   store_id: store20.id
@@ -474,60 +496,264 @@ puts "\n"
 puts "Creating reviews..."
 
 review1 = Review.new(
-  rating: 3,
-  content: "Good",
+  rating: 2,
+  content: "I bought a garment and it was torn, also a girl's dress 👗 on the red label it said 7 euros but at the checkout they charged me 14 because it was not on discount 👎.",
   user_id: owner.id,
   store_id: store1.id
 )
 review1.save!
 
+review112 = Review.new(
+  rating: 3,
+  content: "Little variety, very crowded. Fast and friendly service.",
+  user_id: owner.id,
+  store_id: store1.id
+)
+review112.save!
+review113 = Review.new(
+  rating: 4,
+  content: "It's always good to find a Primark. It's so cheap.",
+  user_id: owner.id,
+  store_id: store1.id
+)
+review113.save!
+review114 = Review.new(
+  rating: 5,
+  content: "Not to be missed if you are looking for cheap shopping with excellent quality and great deals. All this accompanied by friendly staff.",
+  user_id: owner.id,
+  store_id: store1.id
+)
+review114.save!
+
 review2 = Review.new(
   rating: 4,
-  content: "g",
+  content: "I find what I need",
   user_id: owner.id,
   store_id: store2.id
 )
 review2.save!
 
-review3 = Review.new(
-  rating: 5,
-  content: "g",
+review21 = Review.new(
+  rating:2,
+  content: "We were unfortunately cheated by H&M. 🤬The label on the trousers says EUR 20. but EUR 25 is withdrawn.  ",
+  user_id: owner.id,
+  store_id: store2.id
+)
+review21.save!
+
+review22 = Review.new(
+  rating: 4,
+  content: "I always like to go to H&M, actually I always find one or two pieces that I like, but now most H&M shops seem to sell almost only women's and children's clothing on 3 floors, the area for men's fashion has become very small. Nevertheless, there are a few things that you can also buy as a man at H&M, the shop is never too crowded and clean and the staff there can also give you competent advice, if that is what you want. The queues are also never too long. All in all, I can recommend this H&M shop with a clear conscience, especially to women, of course, but men will also find a few pieces that they like.",
+  user_id: owner.id,
+  store_id: store2.id
+)
+review22.save!
+
+review31 = Review.new(
+  rating: 2,
+  content: "The staff chat in the staff room and you wait 10 minutes at the checkout.  Otherwise nice shop",
   user_id: owner.id,
   store_id: store3.id
 )
-review3.save!
+review31.save!
 
-review4 = Review.new(
+review32 = Review.new(
+  rating: 5,
+  content: "I bought wine glasses today because I was very disappointed with Jacques. I came by motorbike and consequently had limited storage space. The lady at the checkout was kind and found an individual transport solution for me. Thank you. Gladly again.",
+  user_id: owner.id,
+  store_id: store3.id
+)
+review32.save!
+
+review33 = Review.new(
+  rating: 5,
+  content: "Walking through the shop 1 sensual pleasure ❣️ Colours, shapes, general look, pleasant, aesthetic order. 1 Benefit for anyone who wants to embellish their home....",
+  user_id: owner.id,
+  store_id: store3.id
+)
+review33.save!
+
+review34 = Review.new(
   rating: 4,
-  content: "g",
+  content: "A beautiful shop! I have never made a big purchase here, but I have always found what I was looking for :-)",
+  user_id: owner.id,
+  store_id: store3.id
+)
+review34.save!
+
+review41 = Review.new(
+  rating: 4,
+  content: "We went to the Steiff Shop in Cologne for the first time, a bit hidden, but then we found it. My daughter found a beautiful snowsuit and my son got a great cuddly toy. The products are simply great! The ladies were very friendly and gave us good advice on both items.",
   user_id: owner.id,
   store_id: store4.id
 )
-review4.save!
+review41.save!
 
-review5 = Review.new(
-  rating: 1,
-  content: "g",
+review42 = Review.new(
+  rating: 2,
+  content: "Child-unfriendly toy shop: We went there so that our son (2 years old) could choose a cuddly toy. The saleswoman told us that touching the cuddly toys was not in the spirit of the inventor and that you can also educate your children so that they do not touch the animals....",
+  user_id: owner.id,
+  store_id: store4.id
+)
+review42.save!
+
+review43 = Review.new(
+  rating: 4,
+  content: "A small, incredibly cute shop in the Naumarkt-Passage. The staff were incredibly nice. Thank you very much.",
+  user_id: owner.id,
+  store_id: store4.id
+)
+review43.save!
+
+review51 = Review.new(
+  rating: 5,
+  content: "The best polo shirts here",
   user_id: owner.id,
   store_id: store5.id
 )
-review5.save!
+review51.save!
 
-review6 = Review.new(
-  rating: 3,
-  content: "Good",
+review52 = Review.new(
+  rating: 4,
+  content: "Nice building/good facilities. Advice is very good when it is empty and there are not so many customers. However, the selection is limited when it comes to extra wishes.",
+  user_id: owner.id,
+  store_id: store5.id
+)
+review52.save!
+
+review53 = Review.new(
+  rating: 1,
+  content: "This is already the second time I've experienced in the morning that the employee prefers to gossip with colleagues, or perhaps visitors, in a language I don't know, at the entrance instead of taking care of customers.
+  Too bad, but now one customer less...",
+  user_id: owner.id,
+  store_id: store5.id
+)
+review53.save!
+
+review54 = Review.new(
+  rating: 4,
+  content: "Great advice ! Nice, friendly and competent.",
+  user_id: owner.id,
+  store_id: store5.id
+)
+review54.save!
+
+review55 = Review.new(
+  rating: 2,
+  content: "Really incompetent staff. I will never go into this shop again.",
+  user_id: owner.id,
+  store_id: store5.id
+)
+review55.save!
+
+review56 = Review.new(
+  rating: 1,
+  content: "Extremely rude staff! I wanted to complain about a shoe that had wrinkles all over it after a week and was told 'I can't tell you anything about that, maybe you wore the shoe wrong...' they treat you with more respect at H&M",
+  user_id: owner.id,
+  store_id: store5.id
+)
+review56.save!
+
+review61 = Review.new(
+  rating: 4,
+  content: "Beautiful and affordable household items",
   user_id: owner.id,
   store_id: store6.id
 )
-review6.save!
+review61.save!
+
+review62 = Review.new(
+  rating: 2,
+  content: "Mostly very neat and clean. It smells very intense, which is a matter of taste, but I like it. In contrast to the regular Zara, the staff here are friendly and courteous. The products are presented clearly, mostly sorted by colour.
+  Unfortunately, the prices are quite expensive. In addition, larger home items are not displayed optimally. You have to crawl under the display tables to look at the coffee tables, for example....",
+  user_id: owner.id,
+  store_id: store6.id
+)
+review62.save!
+
+review63 = Review.new(
+  rating: 4,
+  content: "I think Zara Home has reopened.
+  Today we were there. Very good, beautiful and interesting items on sale.
+  If you want something good you should go to Zara Home.
+  Prices are a bit expensive but good things have to have a price.",
+  user_id: owner.id,
+  store_id: store6.id
+)
+review63.save!
+
+review64 = Review.new(
+  rating: 2,
+  content: "Despite a medically justified certificate, which I showed at the entrance at the request of the doorman, I had to leave Zara Home in Cologne's Mittelstraße immediately because I was not wearing a mask. An employee told me that people like me were not wanted at Zara Home.",
+  user_id: owner.id,
+  store_id: store6.id
+)
+review64.save!
 
 review7 = Review.new(
-  rating: 2,
-  content: "g",
+  rating: 1,
+  content: "Once and never again. Despite bad advice and unused shoes, the goods were not taken back for cash even though they live 700 km away and the shoes were not available online or offline for months. Then technical problems from the shop to redeem the voucher online.",
   user_id: owner.id,
   store_id: store7.id
 )
 review7.save!
+
+review71 = Review.new(
+  rating: 5,
+  content: "You can tell that the staff love sneakers, which makes for a completely different atmosphere than in other sneaker shops. I felt very comfortable and well advised here, but not so pressured to buy something. It's also a really cool selection of sneakers, especially if you want different designs and colours. I'll be happy to come back anytime.",
+  user_id: owner.id,
+  store_id: store7.id
+)
+review71.save!
+
+
+review72 = Review.new(
+  rating: 5,
+  content: "Pleasantly unobtrusive sales staff, but not superficially arrogant (as I've experienced a few times in sneaker circles). Here, you can just stroll through the products without being looked at askance.",
+  user_id: owner.id,
+  store_id: store7.id
+)
+review72.save!
+
+review201 = Review.new(
+  rating: 5,
+  content: "We have bought shoes, waterproof jacket... Good prices on brands.",
+  user_id: owner.id,
+  store_id: store20.id
+)
+review201.save!
+
+review202 = Review.new(
+  rating: 5,
+  content: "Super store with 4 floors where you will find everything about the world of sport and related subjects.",
+  user_id: owner.id,
+  store_id: store20.id
+)
+review202.save!
+
+review203 = Review.new(
+  rating: 5,
+  content: "I received excellent care",
+  user_id: owner.id,
+  store_id: store20.id
+)
+review203.save!
+
+review204 = Review.new(
+  rating: 4,
+  content: "Very extensive sports shop, with some very interesting prices.",
+  user_id: owner.id,
+  store_id: store20.id
+)
+review204.save!
+
+review205 = Review.new(
+  rating: 5,
+  content: "Excellent choice in sportswear",
+  user_id: owner.id,
+  store_id: store20.id
+)
+review205.save!
 
 review8 = Review.new(
   rating: 1,
