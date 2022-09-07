@@ -6,7 +6,8 @@
     <div class="card-info m-0 px-3 py-3">
       <div class="d-flex justify-content-between">
         <h4><strong><%= store.name %></strong></h4>
-        <h4 class="text-end"><strong>1,5 km</strong></h5>
+        <% distance = Geocoder::Calculations.distance_between([50.9380313,6.9396424], [store.latitude,store.longitude]) %>
+        <h4 class="text-end"><strong><%= distance.round(1) %> km</strong></h5>
       </div>
 
 
@@ -23,6 +24,12 @@
         <div class="d-flex flex-row align-items-center">
           <p><i class="fa-solid fa-clock"></i></p>
           <p class="ms-4"><%= store.opening_hour.strftime('%l:%M %p') %> - <%= store.closing_hour.strftime('%l:%M %p') %></p>
+          <% current_time = Time.new.strftime('%H:%M') %>
+          <% if (current_time > store.opening_hour.strftime('%H:%M')) && (current_time < store.closing_hour.strftime('%H:%M')) %>
+            <p class="ms-2 open">Open</p>
+          <% else %>
+            <p class="ms-2 close">Closed</p>
+          <% end %>
         </div>
       </div>
     </div>

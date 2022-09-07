@@ -107,9 +107,20 @@
 
 .form-control {
   border-radius: 6px;
-  width: 100%;
-  margin-right: 16px;
+  min-width: 240px;
+  margin-right: 10px;
   background-color: white;
   border: 1px solid $mint;
   box-shadow: 4px 2px 20px 0px rgba(149, 157, 165, 0.2);
+}
+
+.open {
+  color: rgba(24,128,56,1.00);
+  font-weight: bold;
+}
+
+
+.close {
+  color: rgba(217,48,37,1.00);
+  font-weight: bold;
 }

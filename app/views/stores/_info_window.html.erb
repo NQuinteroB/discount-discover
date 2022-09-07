@@ -1,11 +1,31 @@
 <div class="content">
   <%= link_to store_path(store), class: "link-map" do %>
     <%= cl_image_tag store.photo.key, class: "store-card-map-img" if store.photo.attached?%>
-    <p class="pt-4 ps-3" style="font-size: 1.4rem;"><%= store.name %></p>
-    <p class="ps-3" style="font-size: 1.2rem;"><%= store.address %></p>
-    <div class="d-flex ps-3">
-      <p style="font-size: 1.2rem;"><%= store.opening_hour.strftime('%l:%M %p') %>-</p>
-      <p style="font-size: 1.2rem;"><%= store.closing_hour.strftime('%l:%M %p') %></p>
-    </div>
+    <div class="d-flex justify-content-between">
+        <h4 class="mt-2 ms-2"><strong><%= store.name %></strong></h4>
+        <% distance = Geocoder::Calculations.distance_between([50.9380313,6.9396424], [store.latitude,store.longitude]) %>
+        <h4 class="mt-2 me-3 text-end"><strong><%= distance.round(1) %> km</strong></h5>
+      </div>
+
+
+      <div class="d-flex">
+        <div class="d-flex flex-row align-items-center justify-content-between">
+          <p class="ms-2"><i class="fa-sharp fa-solid fa-location-dot"></i></p>
+          <p class="ms-2" style="font-size: 1.4em;"><%= link_to store.address, "https://www.google.com/maps/dir/?api=1&destination=#{store.latitude}%2C#{store.longitude}&dir_action=navigate", class:"card-link" %></p>
+        </div>
+      </div>
+
+      <div>
+        <div class="d-flex flex-row align-items-center">
+          <p class="ms-2"><i class="fa-solid fa-clock"></i></p>
+          <p class="ms-2" style="font-size: 1.4em;"><%= store.opening_hour.strftime('%l:%M %p') %> - <%= store.closing_hour.strftime('%l:%M %p') %></p>
+          <% current_time = Time.new.strftime('%H:%M') %>
+          <% if (current_time > store.opening_hour.strftime('%H:%M')) && (current_time < store.closing_hour.strftime('%H:%M')) %>
+            <p class="ms-2 open" style="font-size: 1.4em;">Open</p>
+          <% else %>
+            <p class="ms-2 close" style="font-size: 1.4em;">Closed</p>
+          <% end %>
+        </div>
+      </div>
   <% end %>
 </div>
