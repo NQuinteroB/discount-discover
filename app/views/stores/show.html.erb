@@ -76,7 +76,7 @@
   </div>
 </div>
 
-  <div class="discount-banner d-flex align-items-center mt-3">
+  <div class="discount-banner d-flex align-items-end mt-3">
     <h2 class="container"><strong>Products with discount:</strong></h2>
   </div>
 
@@ -84,15 +84,21 @@
   <div class="btn-container d-flex flex-column">
     <div class="cards-container overflow-auto d-flex mt-2 pt-2 ">
       <% @store.products.each do |product| %>
-        <div class="store-card  p-2 mx-2">
-          <div>
-            <h5><strong><%= product.name %></strong></h5>
-            <%= link_to "more info", store_product_path(product.store_id, product), class: "btn-ghost" %>
-            <% disc = (product.price * product.discount/100).round(2) %>
-            <p><strong>Before: €<span class="text-muted text-decoration-line-through"> <%= product.price %></span> now: € <%= product.price - disc %></strong></p>
+        <div class="store-card mx-2">
+          <div class="d-flex flex-column m-0 px-3 py-3">
+            <div class="d-flex justify-content-between mt-1">
+              <h5><strong><%= product.name %></strong></h5>
+              <p><%= link_to "more info", store_product_path(product.store_id, product), class: "btn-ghost" %></p>
+            </div>
+            <div class="mt-3">
+              <% disc = (product.price * product.discount/100).round(2) %>
+            </div>
+            <div class="discount-info d-flex align-items-start">
+              <p><strong>Before: €<span class="text-muted text-decoration-line-through"><%= product.price %></span><p class="mx-1" style="color: red">now:</p> € <%= product.price - disc %></strong></p>
+            </div>
             <hr>
           </div>
-          <div>
+          <div class="p-2">
             <%= cl_image_tag product.photo.key, height: 100, class: "store-image" %>
           </div>
         </div>
