@@ -32,7 +32,19 @@
   color: white;
 }
 
+.btn-navbar:hover {
+  color: $my-orange;
+  transition: width .35s ease-in-out;
+  opacity: 0.6;
+}
+
 .fa-solid {
   font-size: 28px;
   color: white;
+}
+
+.fa-solid:hover {
+  color: $my-orange;
+  transition: width .35s ease-in-out;
+  opacity: 0.6;
 }
