@@ -66,7 +66,7 @@ sport_product = URI.open("https://tienda.clubdeportivotenerife.es/124-thickbox_d
 
 store1 = Store.new(
   name: "Primark",
-  address: "Neumarkt Galerie, Neumarkt 2-4, 50667 Köln",
+  address: "Hillschider Weg 10, 50667 Köln",
   opening_hour: "10:00",
   closing_hour: "21:00",
   user_id: owner.id
@@ -88,7 +88,7 @@ store2.save!
 
 store3 = Store.new(
   name: "DEPOT",
-  address: "Neumarkt 8-10, 50667 Köln",
+  address: "Hornstraße 85, 50823 Köln",
   opening_hour: "09:30",
   closing_hour: "20:00",
   user_id: owner.id
@@ -99,7 +99,7 @@ store3.save!
 
 store4 = Store.new(
   name: "Steiff Shop Köln",
-  address: "Neumarktpassage Neumarkt 18-20, 50667 Köln",
+  address: "Weidengasse 62, 50668 Köln",
   opening_hour: "10:00",
   closing_hour: "19:00",
   user_id: owner.id
