@@ -43,6 +43,10 @@ calvin_store = URI.open("https://lh5.googleusercontent.com/p/AF1QipNADY-UmfAwv_e
 sport_store = URI.open("https://lh5.googleusercontent.com/p/AF1QipP_23het-zMKKmy_yukjatDzGWxf9KNucg3IY4b=w408-h543-k-no")
 
 primark_product = URI.open("https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7a9b2c6bb14f4b108a27a9d300abc4fe_9366/3-STRIPES_CUSHIONED_CREW_SOCKS_3_PAIRS_White_DZ9346_03_standard.jpg")
+primark_store1 = URI.open('https://i.pinimg.com/originals/9c/da/ad/9cdaadf604a1feb593d73f6a9ef62665.jpg')
+primark_product = URI.open()
+primark_product = URI.open()
+primark_product = URI.open()
 hm_product = URI.open("https://img.ltwebstatic.com/images3_pi/2021/11/09/1636455624b80016229255cb33d73d01456b8c0fab_thumbnail_900x.webp")
 depot_product = URI.open("https://www.depotmaletools.com/wp-content/uploads/2020/05/depot-uomo.jpg")
 steiff_product = URI.open("https://www.steiff.com/img/310/300/resize/catalog/product/s/o/soft-cuddly-friends-honey-teddybaer-113482-3.jpg")
@@ -300,6 +304,17 @@ product1 = Product.new(
 )
 product1.photo.attach(io: primark_product , filename: "primark_product.png", content_type: "image/png")
 product1.save!
+
+product2 = Product.new(
+  name: "Shoes",
+  description: "Black peep toe sandals. Sizes 36-39 available in our store.",
+  price: 15.90,
+  discount: 15,
+  store_id: store1.id
+)
+product2.photo.attach(io: primark_product1 , filename: "primark_product1.png", content_type: "image/png")
+product2.save!
+
 
 product2 = Product.new(
   name: "Sweater",
