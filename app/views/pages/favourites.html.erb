@@ -10,8 +10,14 @@
   </div>
 
 <div class="card-container px-4 mb-4">
-  <% @stores.each do |item| %>
-    <% store = Store.find_by(id: item.favoritable_id) %>
-    <%= render partial:'cardindex', locals: {store: store} %>
+  <% if @stores.length != 0 %>
+    <% @stores.each do |item| %>
+      <% store = Store.find_by(id: item.favoritable_id) %>
+      <%= render partial:'cardindex', locals: {store: store} %>
+    <% end %>
+  <% else %>
+    <div class="h-20 mx-2 d-flex justify-content-center align-items-center py-3 alert-no-favs">
+      <h5>You dont have favourites stores yet!!</h5>
+    </div>
   <% end %>
 </div>
