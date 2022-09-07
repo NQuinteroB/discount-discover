@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>The page you requested caught on fire (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap" rel="stylesheet">
   <style>
-  .rails-default-error-page {
+  /* .rails-default-error-page {
     background-color: #EFEFEF;
     color: #2E2F30;
     text-align: center;
@@ -50,17 +53,53 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  } */
+  body {
+    background-color: #222222;
+  }
+
+  h3 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    margin-top: 120px;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  h1{
+    text-align: center;
+    color: rgb(243, 243, 241);
+    font-size: 20px;
+    font-family: "Nunito", "Helvetica", "sans-serif";
+  }
+
+  p {
+    text-align: center;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+  }
+    a {
+    text-align: center;
+    color: white;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+
   }
   </style>
+
 </head>
 
 <body class="rails-default-error-page">
-  <!-- This file lives in public/500.html -->
+  <!-- This file lives in public/404.html -->
   <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <h1>Discout Discovery</h1>
+    <span class = "header"><h3>Pardon the interruption.</h3></span>
+    <p>Please check back later!</p>
+    <h1><a href="http://www.discountdiscover.me">Click me to  Return to app</a>
+</h1>
+<!-- <img src="../app/assets/images/DTNEs801.svg" alt=""> -->
+<!-- <img src="../public/logo-white.png" alt=""> -->
   </div>
 </body>
 </html>
