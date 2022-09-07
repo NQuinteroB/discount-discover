@@ -1,3 +1,8 @@
+<div class="banner-index d-flex justify-content-center align-items-center">
+        <h1 class='title'>Discount</h1>
+        <img id="logo" src=<%= asset_path('logo-white.png') %> alt="discount-discover">
+        <h1 class='title'>Discover</h1>
+</div>
 <div class="map-container" data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">

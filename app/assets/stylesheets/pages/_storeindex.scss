@@ -9,7 +9,7 @@
   border-radius: 50%;
   height: 90px;
   width: 90px;
-  box-shadow: 0 0 15px rgba(187, 187, 187, 0.5);
+  box-shadow: 0 12px 12px rgba(187, 187, 187, 0.5);
 }
 
 .discount-item:hover {
@@ -53,7 +53,7 @@
   width: 100%;
   height: 100vh;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  margin: 50px 0;
+  margin-bottom: 50px;
 }
 
 // card
@@ -69,6 +69,7 @@
   box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.7);
   width: 100%;
   margin-bottom: 1.5em;
+  background-color: white;
 }
 
 .card-link {
@@ -101,5 +102,25 @@
   color: black;
   width: 2rem;
   text-align: center;
+}
 
+
+.form-control {
+  border-radius: 6px;
+  min-width: 240px;
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid $mint;
+  box-shadow: 4px 2px 20px 0px rgba(149, 157, 165, 0.2);
+}
+
+.open {
+  color: rgba(24,128,56,1.00);
+  font-weight: bold;
+}
+
+
+.close {
+  color: rgba(217,48,37,1.00);
+  font-weight: bold;
 }
