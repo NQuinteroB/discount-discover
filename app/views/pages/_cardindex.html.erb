@@ -9,6 +9,12 @@
         <% distance = Geocoder::Calculations.distance_between([50.9380313,6.9396424], [store.latitude,store.longitude]) %>
         <h4 class="text-end"><strong><%= distance.round(1) %> km</strong></h5>
       </div>
+      <div class="stars d-flex">
+        <% sum = 0 %>
+        <% store.reviews.each { |x| sum += x.rating}%>
+        <% avg = sum.to_f / (store.reviews.length) %>
+        <p style="font-size: 1.2em;"><%= avg.round(1)%></p>
+      </div>
 
       <div class="d-flex">
         <div class="d-flex flex-row align-items-center justify-content-between">
