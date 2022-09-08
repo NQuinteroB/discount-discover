@@ -776,165 +776,165 @@ product5.save!
 # product4.photo.attach(io: steiff_product , filename: "steiff_product.png", content_type: "image/png")
 # product4.save!
 
-product5 = Product.new(
-  name: "Polo shirt",
-  description: "Special edition Lacoste x Nike",
-  price: 80.75,
-  discount: 25,
-  store_id: store5.id
-)
-product5.photo.attach(io: lacoste_product , filename: "lacoste_product.png", content_type: "image/png")
-product5.save!
+# product5 = Product.new(
+#   name: "Polo shirt",
+#   description: "Special edition Lacoste x Nike",
+#   price: 80.75,
+#   discount: 25,
+#   store_id: store5.id
+# )
+# product5.photo.attach(io: lacoste_product , filename: "lacoste_product.png", content_type: "image/png")
+# product5.save!
 
-product6 = Product.new(
-  name: "Air freshener",
-  description: "Incense air freshener for any room at your home.",
-  price: 35.85,
-  discount: 35,
-  store_id: store6.id
-)
-product6.photo.attach(io: zarahome_product , filename: "zarahome_product.png", content_type: "image/png")
-product6.save!
+# product6 = Product.new(
+#   name: "Air freshener",
+#   description: "Incense air freshener for any room at your home.",
+#   price: 35.85,
+#   discount: 35,
+#   store_id: store6.id
+# )
+# product6.photo.attach(io: zarahome_product , filename: "zarahome_product.png", content_type: "image/png")
+# product6.save!
 
-product7 = Product.new(
-  name: "Oversize hoodie",
-  description: "Overkill oversize hoodie",
-  price: 90.50,
-  discount: 45,
-  store_id: store7.id
-)
-product7.photo.attach(io: overkill_product , filename: "overkill_product.png", content_type: "image/png")
-product7.save!
+# product7 = Product.new(
+#   name: "Oversize hoodie",
+#   description: "Overkill oversize hoodie",
+#   price: 90.50,
+#   discount: 45,
+#   store_id: store7.id
+# )
+# product7.photo.attach(io: overkill_product , filename: "overkill_product.png", content_type: "image/png")
+# product7.save!
 
-product8 = Product.new(
-  name: "Suit hanger",
-  description: "Super useful for keeping your suit wrinkle-free.",
-  price: 60.35,
-  discount: 20,
-  store_id: store8.id
-)
-product8.photo.attach(io: butler_product , filename: "butler_product.png", content_type: "image/png")
-product8.save!
+# product8 = Product.new(
+#   name: "Suit hanger",
+#   description: "Super useful for keeping your suit wrinkle-free.",
+#   price: 60.35,
+#   discount: 20,
+#   store_id: store8.id
+# )
+# product8.photo.attach(io: butler_product , filename: "butler_product.png", content_type: "image/png")
+# product8.save!
 
-product9 = Product.new(
-  name: "Eye contact lentels",
-  description: "",
-  price: 50,
-  discount: 15,
-  store_id: store9.id
-)
-product9.photo.attach(io: optik_product , filename: "optik_product.png", content_type: "image/png")
-product9.save!
+# product9 = Product.new(
+#   name: "Eye contact lentels",
+#   description: "",
+#   price: 50,
+#   discount: 15,
+#   store_id: store9.id
+# )
+# product9.photo.attach(io: optik_product , filename: "optik_product.png", content_type: "image/png")
+# product9.save!
 
-product10 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 12.60,
-  discount: 15,
-  store_id: store10.id
-)
-product10.photo.attach(io: vintage_product , filename: "vintage_product.png", content_type: "image/png")
-product10.save!
+# product10 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 12.60,
+#   discount: 15,
+#   store_id: store10.id
+# )
+# product10.photo.attach(io: vintage_product , filename: "vintage_product.png", content_type: "image/png")
+# product10.save!
 
-product11 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 80.75,
-  discount: 40,
-  store_id: store11.id
-)
-product11.photo.attach(io: boogs_product , filename: "boogs_product.png", content_type: "image/png")
-product11.save!
+# product11 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 80.75,
+#   discount: 40,
+#   store_id: store11.id
+# )
+# product11.photo.attach(io: boogs_product , filename: "boogs_product.png", content_type: "image/png")
+# product11.save!
 
-product12 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 60.60,
-  discount: 25,
-  store_id: store12.id
-)
-product12.photo.attach(io: icrush_product , filename: "icrush_product.png", content_type: "image/png")
-product12.save!
+# product12 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 60.60,
+#   discount: 25,
+#   store_id: store12.id
+# )
+# product12.photo.attach(io: icrush_product , filename: "icrush_product.png", content_type: "image/png")
+# product12.save!
 
-product13 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 34,
-  discount: 30,
-  store_id: store13.id
-)
-product13.photo.attach(io: ludwig_product , filename: "ludwig_product.png", content_type: "image/png")
-product13.save!
+# product13 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 34,
+#   discount: 30,
+#   store_id: store13.id
+# )
+# product13.photo.attach(io: ludwig_product , filename: "ludwig_product.png", content_type: "image/png")
+# product13.save!
 
-product14 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 60.75,
-  discount: 35,
-  store_id: store14.id
-)
-product14.photo.attach(io: whisky_product , filename: "whisky_product.png", content_type: "image/png")
-product14.save!
+# product14 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 60.75,
+#   discount: 35,
+#   store_id: store14.id
+# )
+# product14.photo.attach(io: whisky_product , filename: "whisky_product.png", content_type: "image/png")
+# product14.save!
 
-product15 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 20.25,
-  discount: 30,
-  store_id: store15.id
-)
-product15.photo.attach(io: stoff_product , filename: "stoff_product.png", content_type: "image/png")
-product15.save!
+# product15 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 20.25,
+#   discount: 30,
+#   store_id: store15.id
+# )
+# product15.photo.attach(io: stoff_product , filename: "stoff_product.png", content_type: "image/png")
+# product15.save!
 
-product16 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 40.85,
-  discount: 50,
-  store_id: store16.id
-)
-product16.photo.attach(io: dufthaus_product , filename: "dufthaus_product.png", content_type: "image/png")
-product16.save!
+# product16 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 40.85,
+#   discount: 50,
+#   store_id: store16.id
+# )
+# product16.photo.attach(io: dufthaus_product , filename: "dufthaus_product.png", content_type: "image/png")
+# product16.save!
 
-product17 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 78,
-  discount: 55,
-  store_id: store17.id
-)
-product17.photo.attach(io: ca_product , filename: "ca_product.png", content_type: "image/png")
-product17.save!
+# product17 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 78,
+#   discount: 55,
+#   store_id: store17.id
+# )
+# product17.photo.attach(io: ca_product , filename: "ca_product.png", content_type: "image/png")
+# product17.save!
 
-product18 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 32.80,
-  discount: 20,
-  store_id: store18.id
-)
-product18.photo.attach(io: bershka_product , filename: "bershka_product.png", content_type: "image/png")
-product18.save!
+# product18 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 32.80,
+#   discount: 20,
+#   store_id: store18.id
+# )
+# product18.photo.attach(io: bershka_product , filename: "bershka_product.png", content_type: "image/png")
+# product18.save!
 
-product19 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 44.50,
-  discount: 40,
-  store_id: store19.id
-)
-product19.photo.attach(io: calvin_product , filename: "calvin_product.png", content_type: "image/png")
-product19.save!
+# product19 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 44.50,
+#   discount: 40,
+#   store_id: store19.id
+# )
+# product19.photo.attach(io: calvin_product , filename: "calvin_product.png", content_type: "image/png")
+# product19.save!
 
-product20 = Product.new(
-  name: "CD Tenerife official shirt.",
-  description: "Centenery commemoration shirt.",
-  price: 85,
-  discount: 50,
-  store_id: store20.id
-)
-product20.photo.attach(io: sport_product , filename: "sport_product.png", content_type: "image/png")
-product20.save!
+# product20 = Product.new(
+#   name: "CD Tenerife official shirt.",
+#   description: "Centenery commemoration shirt.",
+#   price: 85,
+#   discount: 50,
+#   store_id: store20.id
+# )
+# product20.photo.attach(io: sport_product , filename: "sport_product.png", content_type: "image/png")
+# product20.save!
 
 puts "Products created!!!"
 puts "\n"
