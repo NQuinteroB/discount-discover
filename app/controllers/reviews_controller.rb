@@ -22,8 +22,9 @@ class ReviewsController < ApplicationController
     authorize @review
     if @review.save
       redirect_to store_reviews_path(@store), notice: "Review added 👍", status: :see_other
-      
+
     else
+      flash[:alert] = "Something went wrong."
       render :new, status: :unprocessable_entity
     end
   end
