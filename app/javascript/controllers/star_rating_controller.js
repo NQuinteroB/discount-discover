@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import StarRating from "starstar-rating.js/dist/star-rating.js"
+import StarRating from "star-rating.js/dist/star-rating.js"
 
 
 // Connects to data-controller="star-rating"
