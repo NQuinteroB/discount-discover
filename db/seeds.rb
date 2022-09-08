@@ -66,18 +66,11 @@ steiff_product2 = URI.open("https://www.steiff.com//img/1800/1800/resize/catalog
 steiff_product3 = URI.open("https://www.steiff.com//img/1800/1800/resize/catalog/product/d/i/disney-belle-355776.jpg?format=webp")
 steiff_product4 = URI.open("https://www.steiff.com//img/1800/1800/resize/catalog/product/h/a/handpuppe-lotte-242014-3.jpg?format=webp")
 
-
-
-
 lacoste_product = URI.open("https://lac-sk.akinoncdn.com/products/2022/03/02/174495/1f50acbc-56a1-49ba-9e1f-ca648858e228.jpg")
 lacoste_product1 = URI.open("https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-DE-Site/Sites-master/de/dw87fe234f/NH3718LX_H45_24.jpg?imwidth=915&impolicy=product")
 lacoste_product2 = URI.open("https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-DE-Site/Library-Sites-LacosteContent/de/dw45f0f7ed/fw22/plp-header/1-CH1/R2/plp-header-femme-pants-desk.jpg?imwidth=915&impolicy=custom")
 lacoste_product3 = URI.open("https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-DE-Site/Sites-master/de/dw8843e3e1/NF2142AA_K59_24.jpg?imwidth=915&impolicy=product")
 lacoste_product4 = URI.open("https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-DE-Site/Sites-master/de/dwff4cc2e1/XF0004_70V_20.jpg?imwidth=915&impolicy=product")
-
-
-
-
 
 zarahome_product = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZhOGMyat-L881YqU8zACaBGlklJwBbMf0V_B4qPE4k0B6AIyrVjTsDvQkpQW-M1_A8_M&usqp=CAU")
 zarahome_product1 = URI.open("https://static.zarahome.net/8/photos4/2022/I/4/1/p/9279/072/700/9279072700_2_7_2.jpg?t=1657871106834&imwidth=603&imformat=chrome")
@@ -85,26 +78,23 @@ zarahome_product2 = URI.open("https://static.zarahome.net/8/photos4/2022/I/4/1/p
 zarahome_product3 = URI.open("https://static.zarahome.net/8/photos4/2022/I/4/1/b/2310/000/999/BH/SI/2310000999_1_1_2.jpg?t=1657178106967&imwidth=603&imformat=chrome")
 zarahome_product4 = URI.open("https://static.zarahome.net/8/static4/itxwebstandard/logos_parrilla/joinLife.svg?20220908021010&imformat=chrome")
 
-
-
-
 overkill_product = URI.open("https://www.overkillshop.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/o/k/ok-bl-hoodie-blau_1.jpg")
 overkill_product1 = URI.open("https://www.overkillshop.com/media/catalog/product/cache/1/thumbnail/500x/9df78eab33525d08d6e5fb8d27136e95/d/o/do2155-100_1.jpg")
 overkill_product2 = URI.open("https://www.overkillshop.com/media/catalog/product/cache/1/thumbnail/500x/9df78eab33525d08d6e5fb8d27136e95/1/2/1201a568-400_1.jpg")
 overkill_product3 = URI.open("https://www.overkillshop.com/media/catalog/product/cache/1/thumbnail/500x/9df78eab33525d08d6e5fb8d27136e95/s/a/sapa2619-blk_1.jpg")
 overkill_product4 = URI.open("https://www.overkillshop.com/media/catalog/product/cache/1/thumbnail/500x/9df78eab33525d08d6e5fb8d27136e95/s/f/sfs12s45_1.jpg")
 
-
-
-
-
 butler_product = URI.open("https://www.kleiderbuegelprofi.de/media/catalog/product/cache/1/small_image/265x265/9df78eab33525d08d6e5fb8d27136e95/4/6/4655_cobra_2.jpg")
-
-
-
-
+butler_product1 = URI.open("https://cdn.shopify.com/s/files/1/0568/2574/1518/products/10213249-1_1800x1800.jpg?v=1656333041")
+butler_product2 = URI.open("https://cdn.shopify.com/s/files/1/0568/2574/1518/products/BUN01491-1_1800x1800.jpg?v=1657024018")
+butler_product3 = URI.open("https://cdn.shopify.com/s/files/1/0568/2574/1518/products/10226435-1_f53da331-bf54-4613-9e69-7c1439a4be35_1800x1800.jpg?v=1655685809")
+butler_product4 = URI.open("https://cdn.shopify.com/s/files/1/0568/2574/1518/products/10209074_1800x1800.jpg?v=1655670446")
 
 optik_product = URI.open("https://www.city-optik-muenchen.de/wp-content/uploads/Kontaktlinsen-e1621607119812.jpg")
+optik_product1 = URI.open("https://www.city-optik-muenchen.de/wp-content/uploads/Kontaktlinsen-e1621607119812.jpg")
+optik_product2 = URI.open("https://www.city-optik-muenchen.de/wp-content/uploads/Kontaktlinsen-e1621607119812.jpg")
+optik_product3 = URI.open("https://www.city-optik-muenchen.de/wp-content/uploads/Kontaktlinsen-e1621607119812.jpg")
+optik_product4 = URI.open("https://www.city-optik-muenchen.de/wp-content/uploads/Kontaktlinsen-e1621607119812.jpg")
 
 
 
@@ -718,6 +708,60 @@ product5 = Product.new(
 )
 product5.photo.attach(io: overkill_product4, filename: "overkill_product1.png", content_type: "image/png")
 product5.save!
+
+
+# This are BUTLERHOME products
+
+product1 = Product.new(
+  name: "PARADISE NOW",
+  description: "Boho trend: for the relaxed lifestyle",
+  price: 95,00,
+  discount: 15,
+  store_id: store8.id
+)
+product1.photo.attach(io: butler_product, filename: "butler_product.png", content_type: "image/png")
+product1.save!
+
+product2 = Product.new(
+  name: "RETRO",
+  description: "Cup set 4 pcs. 550ml.",
+  price: 70.00,
+  discount: 60,
+  store_id: store8.id
+)
+product2.photo.attach(io:butler_product1, filename: "butler_product1.png", content_type: "image/png")
+product2.save!
+
+product3 = Product.new(
+  name: "SOLID",
+  description: "Futon cushion L 42 x W 42cm.",
+  price: 80.00,
+  discount: 60,
+  store_id: store8.id
+)
+product3.photo.attach(io: butler_product2, filename: "butler_product1.png", content_type: "image/png")
+product3.save!
+
+product4 = Product.new(
+  name: "VINOTHEK",
+  description: "wine shelf.",
+  price: 125.00,
+  discount: 70,
+  store_id: store8.id
+)
+product4.photo.attach(io: butler_product3, filename: "butler_product1.png", content_type: "image/png")
+product4.save!
+
+product5 = Product.new(
+  name: "MANGOLINE",
+  description: "cupboard",
+  price: 160.00,
+  discount: 40,
+  store_id: store8.id
+)
+product5.photo.attach(io: butler_product4, filename: "butler_product1.png", content_type: "image/png")
+product5.save!
+
 
 
 
