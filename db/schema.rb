@@ -42,19 +42,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_073930) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "cart_items", force: :cascade do |t|
-    t.integer "cart_id"
-    t.integer "store_id"
-    t.integer "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "carts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "favorites", force: :cascade do |t|
     t.string "favoritable_type", null: false
     t.bigint "favoritable_id", null: false
@@ -73,22 +60,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_073930) do
     t.index ["scope"], name: "index_favorites_on_scope"
   end
 
-  create_table "line_items", force: :cascade do |t|
-    t.bigint "product_id", null: false
-    t.bigint "wish_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "quantity", default: 1
-    t.index ["product_id"], name: "index_line_items_on_product_id"
-    t.index ["wish_id"], name: "index_line_items_on_wish_id"
-  end
-
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.float "price"
     t.integer "discount"
     t.text "description"
-    t.boolean "active"
+    t.boolean "active", default: true
     t.bigint "store_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -135,15 +112,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_073930) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "wishes", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "line_items", "products"
-  add_foreign_key "line_items", "wishes"
   add_foreign_key "products", "stores"
   add_foreign_key "reviews", "stores"
   add_foreign_key "reviews", "users"
