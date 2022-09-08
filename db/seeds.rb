@@ -214,7 +214,7 @@ store8.save!
 
 store9 = Store.new(
   name: "OPTIK OBERLÄNDER",
-  address: "Ehrenstraße 71A, 50672 Köln",
+  address: "Brunostraße 4, 50678 Köln",
   opening_hour: "10:00",
   closing_hour: "19:00",
   user_id: owner.id
@@ -313,7 +313,7 @@ store17.save!
 
 store18 = Store.new(
   name: "Bershka",
-  address: "Schildergasse 46-48, 50667 Köln",
+  address: "Cäcilienstraße, 50667 Köln",
   opening_hour: "10:00",
   closing_hour: "20:00",
   user_id: owner.id
