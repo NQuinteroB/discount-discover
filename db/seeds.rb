@@ -530,8 +530,8 @@ product3.save!
 
 product4 = Product.new(
   name: "Disney Belle",
-  description: "Belle, the protagonist of "Beauty and the Beast", is the first Steiff Disney Princess made of wool felt. Your lovingly hand-painted.",
-  price: 1,299.00,
+  description: "Belle, the protagonist of 'Beauty and the Beast', is the first Steiff Disney Princess made of wool felt. Your lovingly hand-painted.",
+  price: 1.29,
   discount: 70,
   store_id: store4.id
 )
@@ -554,7 +554,7 @@ product5.save!
 product1 = Product.new(
   name: "Men's wash bag",
   description: "Men's wash bag THE BLEND made of printed canvas",
-  price: 95,00,
+  price: 96.99,
   discount: 15,
   store_id: store5.id
 )
@@ -564,7 +564,7 @@ product1.save!
 product2 = Product.new(
   name: "Women's LACOSTE",
   description: "Women's LACOSTE color block hooded sweatshirt.",
-  price: 160.00,
+  price: 160.99,
   discount: 60,
   store_id: store5.id
 )
@@ -574,7 +574,7 @@ product2.save!
 product3 = Product.new(
   name: "Men's Lacoste",
   description: "Héritage High Neck Sweatshirt.",
-  price: 180.00,
+  price: 180.99,
   discount: 60,
   store_id: store5.id
 )
@@ -584,7 +584,7 @@ product3.save!
 product4 = Product.new(
   name: "Two-tone",
   description: "Two-tone reversible women's tote bag ANNA.",
-  price: 125.00,
+  price: 125.50,
   discount: 70,
   store_id: store5.id
 )
@@ -594,7 +594,7 @@ product4.save!
 product5 = Product.new(
   name: "Women's LACOSTE ",
   description: "Women's LACOSTE training trousers with a maritime print",
-  price: 160.00,
+  price: 160.40,
   discount: 40,
   store_id: store5.id
 )
@@ -608,7 +608,7 @@ product5.save!
 product1 = Product.new(
   name: "WOODEN TABLE WITH BEVEL CUT",
   description: "Height: 40cm Width: 120cm Depth: 55cm The legs are delivered disassembled.",
-  price: 95,00,
+  price: 95.50,
   discount: 15,
   store_id: store6.id
 )
@@ -618,7 +618,7 @@ product1.save!
 product2 = Product.new(
   name: "ARMCHAIR IN ASH WOOD AND CANVAS",
   description: "Height: 80.5cm Width: 64cm Depth: 77cm Upholstered armchair in linen with structure in natural ash wood.",
-  price: 160.00,
+  price: 160.60,
   discount: 60,
   store_id: store6.id
 )
@@ -628,7 +628,7 @@ product2.save!
 product3 = Product.new(
   name: "FOLDING CHAIR AND CUSHION",
   description: "Teak folding chair with cotton seat.",
-  price: 180.00,
+  price: 180.20,
   discount: 60,
   store_id: store6.id
 )
@@ -638,7 +638,7 @@ product3.save!
 product4 = Product.new(
   name: "CHENILLE BLANKET ",
   description: "Plain chenille blanket with fringes.",
-  price: 125.00,
+  price: 125.10,
   discount: 70,
   store_id: store6.id
 )
@@ -648,7 +648,7 @@ product4.save!
 product5 = Product.new(
   name: "LINEN BLANKET WITH WAFFLE STRUCTURE",
   description: "Cotton and linen blanket with a waffle structure and trim at the ends.",
-  price: 160.00,
+  price: 160.70,
   discount: 40,
   store_id: store6.id
 )
@@ -662,7 +662,7 @@ product5.save!
 product1 = Product.new(
   name: "Clot x Air Jordan Delta 2",
   description: "White / University Blue - Navy - Iron Grey.",
-  price: 95,00,
+  price: 95.50,
   discount: 15,
   store_id: store7.id
 )
@@ -672,7 +672,7 @@ product1.save!
 product2 = Product.new(
   name: "Awake NY x Asics Gel Lyte III OG",
   description: "Della Robbia Blue / Della Robbia Blue.",
-  price: 160.00,
+  price: 160.70,
   discount: 60,
   store_id: store7.id
 )
@@ -682,7 +682,7 @@ product2.save!
 product3 = Product.new(
   name: "Ellesse Berkeley Cap ",
   description: "Hersteller Farbcode Black.",
-  price: 180.00,
+  price: 180.30,
   discount: 60,
   store_id: store7.id
 )
@@ -692,7 +692,7 @@ product3.save!
 product4 = Product.new(
   name: "Stylefile Marker 12er Multi Set 45",
   description: "fit normal.",
-  price: 125.00,
+  price: 125.20,
   discount: 70,
   store_id: store7.id
 )
@@ -702,7 +702,7 @@ product4.save!
 product5 = Product.new(
   name: "adidas Wmns Astir",
   description: "colour  Black-and-white",
-  price: 160.00,
+  price: 160.10,
   discount: 40,
   store_id: store7.id
 )
@@ -715,7 +715,7 @@ product5.save!
 product1 = Product.new(
   name: "PARADISE NOW",
   description: "Boho trend: for the relaxed lifestyle",
-  price: 95,00,
+  price: 95.10,
   discount: 15,
   store_id: store8.id
 )
