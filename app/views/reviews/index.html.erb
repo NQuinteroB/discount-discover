@@ -14,14 +14,14 @@
   <div class="card-review">
     <div class="d-flex justify-content-between">
        <h2 class="p-1">Reviews</h2>
-      <%= link_to new_store_review_path(@store), class: "btn-ghost" do %>
-        <i class="fa-solid fa-plus"></i>
+        <%= link_to new_store_review_path(@store), class: "btn-ghost1" do %>
+        <i style="color: white;" class="fa-solid fa-plus"></i>
       <% end %>
- 
+
     </div>
- 
+
          <div class="list-group p-2">
-        <% @store.reviews.each do |review| %>
+        <% @store.reviews.reverse.each do |review| %>
           <li class="list-group-item">
             <small>
               <% count = 0 %>
@@ -38,11 +38,9 @@
             </small>
             <p><%= review.content %></p>
           </li>
-          
+
         <% end %>
       </div>
   <hr>
   </div>
 </div>
-
-

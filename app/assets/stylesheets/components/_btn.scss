@@ -10,6 +10,18 @@
 
 }
 
+.btn-ghost1 {
+  color: $black;
+  border: 2px solid $mint;
+  padding: 8px 24px;
+  border-radius: 50px;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  background-color: $my-blue;
+
+}
+
 .btn-flat {
   color: black;
   padding: 8px 24px;

@@ -35,9 +35,8 @@
 
     <div class="discount-item-store d-flex  align-items-center justify-content-center">
         <% products = @store.products.order(:discount) %>
-        <p class="discount-amount m-0"><%=products.first.discount%>-<%=products.last.discount%>%</p>
+        <p style="color:white;" class="discount-amount m-0"><%=products.first.discount%>-<%=products.last.discount%>%</p>
     </div>
-
       <%= cl_image_tag @store.photo.key, height: 100 %>
       <div class="card-trip-infos py-3 px-3">
 
@@ -54,7 +53,9 @@
             favss_favoriting_value: false,
             turbo_track: :reload
           } do %>
-            <h3 class="red-heart fa-regular fa-heart m-2" data-favss-target="heart"></h3>
+          <div data-favss-target="heart" class="active-heart" >
+            <h3 class="fa-regular fa-heart m-2" ></h3>
+          </div>
           <% end %>
         <% else %>
           <%= link_to  favorite_store_path, data: {
@@ -64,7 +65,9 @@
             favss_favoriting_value: true,
             turbo_track: :reload
           } do %>
-            <h3 class="no-red-heart fa-regular fa-heart m-2" data-favss-target="heart"></h3>
+          <div data-favss-target="heart" class="inactive-heart">
+            <h3 class="fa-regular fa-heart m-2"></h3>
+          </div>
           <% end %>
         <% end %>
         <%= link_to "Navigate me there", "https://www.google.com/maps/dir/?api=1&destination=#{@store.latitude}%2C#{@store.longitude}&dir_action=navigate", class:"card-link btn-flat" %>
@@ -93,10 +96,14 @@
             <div class="mt-3">
               <% disc = (product.price * product.discount/100).round(2) %>
             </div>
-            <div class="discount-info d-flex align-items-start">
-              <p><strong>Before: €<span class="text-muted text-decoration-line-through"><%= product.price %></span><p class="mx-1" style="color: red">now:</p> € <%= product.price - disc %></strong></p>
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="discount-info d-flex align-items-start">
+                <p class="mb-0"style="color: red; font-size: 1.2em;"><strong><span class="text-muted text-decoration-line-through"><%= number_with_precision(product.price, :precision => 2)%></span><p class="ms-1 mb-0" style="font-size: 1.2em; ">€ Now: <%= number_with_precision(product.price - disc, :precision => 2)%>€</p></strong></p>
+              </div>
+              <div class="discount-product d-flex align-items-center justify-content-center me-4">
+                  <p class="mb-0" style="color:white; font-weight: bold;"><%=product.discount%>%</p>
+              </div>
             </div>
-            <hr>
           </div>
           <div class="p-2">
             <%= cl_image_tag product.photo.key, height: 100, class: "store-image" %>
