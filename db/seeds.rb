@@ -56,13 +56,50 @@ hm_product4 = URI.open('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csour
 
 depot_product = URI.open("https://www.depotmaletools.com/wp-content/uploads/2020/05/depot-uomo.jpg")
 depot_product1 = URI.open('https://depot.dam.aboutyou.cloud/images/7ede4683aac76e4477c20e57c4c4d1e1.jpg?width=290&height=290')
+depot_product2 = URI.open('https://depot.dam.aboutyou.cloud/images/403e2a438143db11500183b7ef5d915e.jpg?width=767&height=767')
+depot_product3 = URI.open('https://depot.dam.aboutyou.cloud/images/74d7c7995232c2250c4da425adcb574b.jpg?width=767&height=767')
+depot_product4 = URI.open('https://depot.dam.aboutyou.cloud/images/882b0d52dc97dbeda21558c5ff11ea11.jpg?width=767&height=767')
 
 steiff_product = URI.open("https://www.steiff.com/img/310/300/resize/catalog/product/s/o/soft-cuddly-friends-honey-teddybaer-113482-3.jpg")
+steiff_product1 = URI.open("https://www.steiff.com//img/1800/1800/resize/catalog/product/d/i/disney-das-biest-355523-2.jpg?format=webp")
+steiff_product2 = URI.open("https://www.steiff.com//img/1800/1800/resize/catalog/product/a/n/anhaenger-disney-winnie-puuh-355905-3.jpg?format=webp")
+steiff_product3 = URI.open("https://www.steiff.com//img/1800/1800/resize/catalog/product/d/i/disney-belle-355776.jpg?format=webp")
+steiff_product4 = URI.open("https://www.steiff.com//img/1800/1800/resize/catalog/product/h/a/handpuppe-lotte-242014-3.jpg?format=webp")
+
 lacoste_product = URI.open("https://lac-sk.akinoncdn.com/products/2022/03/02/174495/1f50acbc-56a1-49ba-9e1f-ca648858e228.jpg")
+lacoste_product1 = URI.open("https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-DE-Site/Sites-master/de/dw87fe234f/NH3718LX_H45_24.jpg?imwidth=915&impolicy=product")
+lacoste_product2 = URI.open("https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-DE-Site/Library-Sites-LacosteContent/de/dw45f0f7ed/fw22/plp-header/1-CH1/R2/plp-header-femme-pants-desk.jpg?imwidth=915&impolicy=custom")
+lacoste_product3 = URI.open("https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-DE-Site/Sites-master/de/dw8843e3e1/NF2142AA_K59_24.jpg?imwidth=915&impolicy=product")
+lacoste_product4 = URI.open("https://image1.lacoste.com/dw/image/v2/AAQM_PRD/on/demandware.static/Sites-DE-Site/Sites-master/de/dwff4cc2e1/XF0004_70V_20.jpg?imwidth=915&impolicy=product")
+
 zarahome_product = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZhOGMyat-L881YqU8zACaBGlklJwBbMf0V_B4qPE4k0B6AIyrVjTsDvQkpQW-M1_A8_M&usqp=CAU")
+zarahome_product1 = URI.open("https://static.zarahome.net/8/photos4/2022/I/4/1/p/9279/072/700/9279072700_2_7_2.jpg?t=1657871106834&imwidth=603&imformat=chrome")
+zarahome_product2 = URI.open("https://static.zarahome.net/8/photos4/2022/I/4/1/p/4141/073/251/4141073251_2_7_2.jpg?t=1657548072139&imwidth=603&imformat=chrome")
+zarahome_product3 = URI.open("https://static.zarahome.net/8/photos4/2022/I/4/1/b/2310/000/999/BH/SI/2310000999_1_1_2.jpg?t=1657178106967&imwidth=603&imformat=chrome")
+zarahome_product4 = URI.open("https://static.zarahome.net/8/static4/itxwebstandard/logos_parrilla/joinLife.svg?20220908021010&imformat=chrome")
+
 overkill_product = URI.open("https://www.overkillshop.com/media/catalog/product/cache/2/small_image/300x/9df78eab33525d08d6e5fb8d27136e95/o/k/ok-bl-hoodie-blau_1.jpg")
+overkill_product1 = URI.open("https://www.overkillshop.com/media/catalog/product/cache/1/thumbnail/500x/9df78eab33525d08d6e5fb8d27136e95/d/o/do2155-100_1.jpg")
+overkill_product2 = URI.open("https://www.overkillshop.com/media/catalog/product/cache/1/thumbnail/500x/9df78eab33525d08d6e5fb8d27136e95/1/2/1201a568-400_1.jpg")
+overkill_product3 = URI.open("https://www.overkillshop.com/media/catalog/product/cache/1/thumbnail/500x/9df78eab33525d08d6e5fb8d27136e95/s/a/sapa2619-blk_1.jpg")
+overkill_product4 = URI.open("https://www.overkillshop.com/media/catalog/product/cache/1/thumbnail/500x/9df78eab33525d08d6e5fb8d27136e95/s/f/sfs12s45_1.jpg")
+
 butler_product = URI.open("https://www.kleiderbuegelprofi.de/media/catalog/product/cache/1/small_image/265x265/9df78eab33525d08d6e5fb8d27136e95/4/6/4655_cobra_2.jpg")
+butler_product1 = URI.open("https://cdn.shopify.com/s/files/1/0568/2574/1518/products/10213249-1_1800x1800.jpg?v=1656333041")
+butler_product2 = URI.open("https://cdn.shopify.com/s/files/1/0568/2574/1518/products/BUN01491-1_1800x1800.jpg?v=1657024018")
+butler_product3 = URI.open("https://cdn.shopify.com/s/files/1/0568/2574/1518/products/10226435-1_f53da331-bf54-4613-9e69-7c1439a4be35_1800x1800.jpg?v=1655685809")
+butler_product4 = URI.open("https://cdn.shopify.com/s/files/1/0568/2574/1518/products/10209074_1800x1800.jpg?v=1655670446")
+
 optik_product = URI.open("https://www.city-optik-muenchen.de/wp-content/uploads/Kontaktlinsen-e1621607119812.jpg")
+optik_product1 = URI.open("https://www.city-optik-muenchen.de/wp-content/uploads/Kontaktlinsen-e1621607119812.jpg")
+optik_product2 = URI.open("https://www.city-optik-muenchen.de/wp-content/uploads/Kontaktlinsen-e1621607119812.jpg")
+optik_product3 = URI.open("https://www.city-optik-muenchen.de/wp-content/uploads/Kontaktlinsen-e1621607119812.jpg")
+optik_product4 = URI.open("https://www.city-optik-muenchen.de/wp-content/uploads/Kontaktlinsen-e1621607119812.jpg")
+
+
+
+
+
 vintage_product = URI.open("https://cdnimg.emmiol.com/E/202012/img_original-EAL0100BO-27231216310.jpg")
 boogs_product = URI.open("https://boogs-home.com/wp-content/uploads/2020/12/39904_Product-500x500.jpg")
 icrush_product = URI.open("https://icrush.de/wp-content/uploads/2022/08/OE0665S.2jpg-510x680.jpg")
@@ -428,177 +465,476 @@ product2 = Product.new(
 product2.photo.attach(io: depot_product1, filename: "depot_product1.png", content_type: "image/png")
 product2.save!
 
-
-#next store
-product4 = Product.new(
-  name: "Teddy Bear",
-  description: "50cm tall teddy bear for kids.",
-  price: 18.95,
-  discount: 15,
-  store_id: store4.id
+product3 = Product.new(
+  name: "Cushion Cover Set",
+  description: "Set consists of: 2 cushion covers, 1 blanket. Dimension:3 parts",
+  price: 51.99,
+  discount: 45,
+  store_id: store3.id
 )
-product4.photo.attach(io: steiff_product , filename: "steiff_product.png", content_type: "image/png")
+product3.photo.attach(io: depot_product2, filename: "depot_product1.png", content_type: "image/png")
+product3.save!
+
+product4 = Product.new(
+  name: "Napkin ring Flower",
+  description: "material: 60% dried flower and 40% birch wood (Betula pubescens)",
+  price: 11.96,
+  discount: 15,
+  store_id: store3.id
+)
+product4.photo.attach(io: depot_product3, filename: "depot_product1.png", content_type: "image/png")
 product4.save!
 
 product5 = Product.new(
-  name: "Polo shirt",
-  description: "Special edition Lacoste x Nike",
-  price: 80.75,
-  discount: 25,
-  store_id: store5.id
+  name: "Napkin ring Flower",
+  description: "material: 100% polyester, colour:multicoloured, Dimensions: L 46 x W 30 cm",
+  price: 12.99,
+  discount: 35,
+  store_id: store3.id
 )
-product5.photo.attach(io: lacoste_product , filename: "lacoste_product.png", content_type: "image/png")
+product5.photo.attach(io: depot_product4, filename: "depot_product1.png", content_type: "image/png")
 product5.save!
 
-product6 = Product.new(
-  name: "Air freshener",
-  description: "Incense air freshener for any room at your home.",
-  price: 35.85,
-  discount: 35,
+
+# This are STEIFF products
+
+product1 = Product.new(
+  name: "sweatshirt",
+  description: "color (light blue)",
+  price: 37.95,
+  discount: 15,
+  store_id: store4.id
+)
+product1.photo.attach(io: steiff_product, filename: "steiff_product.png", content_type: "image/png")
+product1.save!
+
+product2 = Product.new(
+  name: "Disney The Beast",
+  description: "Belle's prince is here. Belle is the heroine of Disney's animated film Beauty and the Beast.",
+  price: 599.00,
+  discount: 60,
+  store_id: store4.id
+)
+product2.photo.attach(io: steiff_product1, filename: "steiff_product1.png", content_type: "image/png")
+product2.save!
+
+product3 = Product.new(
+  name: "Disney Winnie the Pooh pendant",
+  description: "Based on the classic Winnie the Pooh books by AA Milne, this magical childhood memory is now ready to take with you wherever you go.",
+  price: 119.00,
+  discount: 60,
+  store_id: store4.id
+)
+product3.photo.attach(io: steiff_product2, filename: "steiff_product1.png", content_type: "image/png")
+product3.save!
+
+product4 = Product.new(
+  name: "Disney Belle",
+  description: "Belle, the protagonist of 'Beauty and the Beast', is the first Steiff Disney Princess made of wool felt. Your lovingly hand-painted.",
+  price: 1.29,
+  discount: 70,
+  store_id: store4.id
+)
+product4.photo.attach(io: steiff_product3, filename: "steiff_product1.png", content_type: "image/png")
+product4.save!
+
+product5 = Product.new(
+  name: "Hand puppet Lotte",
+  description: "Hand puppets have always been one of the most popular toys. And they promote the development of the children through role-playing games..",
+  price: 34.90,
+  discount: 40,
+  store_id: store4.id
+)
+product5.photo.attach(io: steiff_product4, filename: "steiff_product1.png", content_type: "image/png")
+product5.save!
+
+
+# This are LACOSTE products
+
+product1 = Product.new(
+  name: "Men's wash bag",
+  description: "Men's wash bag THE BLEND made of printed canvas",
+  price: 96.99,
+  discount: 15,
+  store_id: store5.id
+)
+product1.photo.attach(io: lacoste_product, filename: "lacoste_product.png", content_type: "image/png")
+product1.save!
+
+product2 = Product.new(
+  name: "Women's LACOSTE",
+  description: "Women's LACOSTE color block hooded sweatshirt.",
+  price: 160.99,
+  discount: 60,
+  store_id: store5.id
+)
+product2.photo.attach(io: lacoste_product1, filename: "lacoste_product1.png", content_type: "image/png")
+product2.save!
+
+product3 = Product.new(
+  name: "Men's Lacoste",
+  description: "Héritage High Neck Sweatshirt.",
+  price: 180.99,
+  discount: 60,
+  store_id: store5.id
+)
+product3.photo.attach(io: lacoste_product2, filename: "lacoste_product1.png", content_type: "image/png")
+product3.save!
+
+product4 = Product.new(
+  name: "Two-tone",
+  description: "Two-tone reversible women's tote bag ANNA.",
+  price: 125.50,
+  discount: 70,
+  store_id: store5.id
+)
+product4.photo.attach(io: lacoste_product3, filename: "lacoste_product1.png", content_type: "image/png")
+product4.save!
+
+product5 = Product.new(
+  name: "Women's LACOSTE ",
+  description: "Women's LACOSTE training trousers with a maritime print",
+  price: 160.40,
+  discount: 40,
+  store_id: store5.id
+)
+product5.photo.attach(io: lacoste_product4, filename: "lacoste_product1.png", content_type: "image/png")
+product5.save!
+
+
+
+# This are ZARAHOME products
+
+product1 = Product.new(
+  name: "WOODEN TABLE WITH BEVEL CUT",
+  description: "Height: 40cm Width: 120cm Depth: 55cm The legs are delivered disassembled.",
+  price: 95.50,
+  discount: 15,
   store_id: store6.id
 )
-product6.photo.attach(io: zarahome_product , filename: "zarahome_product.png", content_type: "image/png")
-product6.save!
+product1.photo.attach(io: zarahome_product, filename: "zarahome_product.png", content_type: "image/png")
+product1.save!
 
-product7 = Product.new(
-  name: "Oversize hoodie",
-  description: "Overkill oversize hoodie",
-  price: 90.50,
-  discount: 45,
+product2 = Product.new(
+  name: "ARMCHAIR IN ASH WOOD AND CANVAS",
+  description: "Height: 80.5cm Width: 64cm Depth: 77cm Upholstered armchair in linen with structure in natural ash wood.",
+  price: 160.60,
+  discount: 60,
+  store_id: store6.id
+)
+product2.photo.attach(io:zarahome_product1, filename: "lacoste_product1.png", content_type: "image/png")
+product2.save!
+
+product3 = Product.new(
+  name: "FOLDING CHAIR AND CUSHION",
+  description: "Teak folding chair with cotton seat.",
+  price: 180.20,
+  discount: 60,
+  store_id: store6.id
+)
+product3.photo.attach(io: zarahome_product2, filename: "lacoste_product1.png", content_type: "image/png")
+product3.save!
+
+product4 = Product.new(
+  name: "CHENILLE BLANKET ",
+  description: "Plain chenille blanket with fringes.",
+  price: 125.10,
+  discount: 70,
+  store_id: store6.id
+)
+product4.photo.attach(io: zarahome_product3, filename: "lacoste_product1.png", content_type: "image/png")
+product4.save!
+
+product5 = Product.new(
+  name: "LINEN BLANKET WITH WAFFLE STRUCTURE",
+  description: "Cotton and linen blanket with a waffle structure and trim at the ends.",
+  price: 160.70,
+  discount: 40,
+  store_id: store6.id
+)
+product5.photo.attach(io: zarahome_product4, filename: "lacoste_product1.png", content_type: "image/png")
+product5.save!
+
+
+
+# This are OVERKILLHOME products
+
+product1 = Product.new(
+  name: "Clot x Air Jordan Delta 2",
+  description: "White / University Blue - Navy - Iron Grey.",
+  price: 95.50,
+  discount: 15,
   store_id: store7.id
 )
-product7.photo.attach(io: overkill_product , filename: "overkill_product.png", content_type: "image/png")
-product7.save!
+product1.photo.attach(io: overkill_product, filename: "overkill_product.png", content_type: "image/png")
+product1.save!
 
-product8 = Product.new(
-  name: "Suit hanger",
-  description: "Super useful for keeping your suit wrinkle-free.",
-  price: 60.35,
-  discount: 20,
+product2 = Product.new(
+  name: "Awake NY x Asics Gel Lyte III OG",
+  description: "Della Robbia Blue / Della Robbia Blue.",
+  price: 160.70,
+  discount: 60,
+  store_id: store7.id
+)
+product2.photo.attach(io:overkill_product1, filename: "overkill_product1.png", content_type: "image/png")
+product2.save!
+
+product3 = Product.new(
+  name: "Ellesse Berkeley Cap ",
+  description: "Hersteller Farbcode Black.",
+  price: 180.30,
+  discount: 60,
+  store_id: store7.id
+)
+product3.photo.attach(io: overkill_product2, filename: "overkill_product1.png", content_type: "image/png")
+product3.save!
+
+product4 = Product.new(
+  name: "Stylefile Marker 12er Multi Set 45",
+  description: "fit normal.",
+  price: 125.20,
+  discount: 70,
+  store_id: store7.id
+)
+product4.photo.attach(io: overkill_product3, filename: "overkill_product1.png", content_type: "image/png")
+product4.save!
+
+product5 = Product.new(
+  name: "adidas Wmns Astir",
+  description: "colour  Black-and-white",
+  price: 160.10,
+  discount: 40,
+  store_id: store7.id
+)
+product5.photo.attach(io: overkill_product4, filename: "overkill_product1.png", content_type: "image/png")
+product5.save!
+
+
+# This are BUTLERHOME products
+
+product1 = Product.new(
+  name: "PARADISE NOW",
+  description: "Boho trend: for the relaxed lifestyle",
+  price: 95.10,
+  discount: 15,
   store_id: store8.id
 )
-product8.photo.attach(io: butler_product , filename: "butler_product.png", content_type: "image/png")
-product8.save!
+product1.photo.attach(io: butler_product, filename: "butler_product.png", content_type: "image/png")
+product1.save!
 
-product9 = Product.new(
-  name: "Eye contact lentels",
-  description: "",
-  price: 50,
-  discount: 15,
-  store_id: store9.id
+product2 = Product.new(
+  name: "RETRO",
+  description: "Cup set 4 pcs. 550ml.",
+  price: 70.00,
+  discount: 60,
+  store_id: store8.id
 )
-product9.photo.attach(io: optik_product , filename: "optik_product.png", content_type: "image/png")
-product9.save!
+product2.photo.attach(io:butler_product1, filename: "butler_product1.png", content_type: "image/png")
+product2.save!
 
-product10 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 12.60,
-  discount: 15,
-  store_id: store10.id
+product3 = Product.new(
+  name: "SOLID",
+  description: "Futon cushion L 42 x W 42cm.",
+  price: 80.00,
+  discount: 60,
+  store_id: store8.id
 )
-product10.photo.attach(io: vintage_product , filename: "vintage_product.png", content_type: "image/png")
-product10.save!
+product3.photo.attach(io: butler_product2, filename: "butler_product1.png", content_type: "image/png")
+product3.save!
 
-product11 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 80.75,
+product4 = Product.new(
+  name: "VINOTHEK",
+  description: "wine shelf.",
+  price: 125.00,
+  discount: 70,
+  store_id: store8.id
+)
+product4.photo.attach(io: butler_product3, filename: "butler_product1.png", content_type: "image/png")
+product4.save!
+
+product5 = Product.new(
+  name: "MANGOLINE",
+  description: "cupboard",
+  price: 160.00,
   discount: 40,
-  store_id: store11.id
+  store_id: store8.id
 )
-product11.photo.attach(io: boogs_product , filename: "boogs_product.png", content_type: "image/png")
-product11.save!
+product5.photo.attach(io: butler_product4, filename: "butler_product1.png", content_type: "image/png")
+product5.save!
 
-product12 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 60.60,
-  discount: 25,
-  store_id: store12.id
-)
-product12.photo.attach(io: icrush_product , filename: "icrush_product.png", content_type: "image/png")
-product12.save!
 
-product13 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 34,
-  discount: 30,
-  store_id: store13.id
-)
-product13.photo.attach(io: ludwig_product , filename: "ludwig_product.png", content_type: "image/png")
-product13.save!
 
-product14 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 60.75,
-  discount: 35,
-  store_id: store14.id
-)
-product14.photo.attach(io: whisky_product , filename: "whisky_product.png", content_type: "image/png")
-product14.save!
 
-product15 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 20.25,
-  discount: 30,
-  store_id: store15.id
-)
-product15.photo.attach(io: stoff_product , filename: "stoff_product.png", content_type: "image/png")
-product15.save!
+#next store
+# product4 = Product.new(
+#   name: "Teddy Bear",
+#   description: "50cm tall teddy bear for kids.",
+#   price: 18.95,
+#   discount: 15,
+#   store_id: store4.id
+# )
+# product4.photo.attach(io: steiff_product , filename: "steiff_product.png", content_type: "image/png")
+# product4.save!
 
-product16 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 40.85,
-  discount: 50,
-  store_id: store16.id
-)
-product16.photo.attach(io: dufthaus_product , filename: "dufthaus_product.png", content_type: "image/png")
-product16.save!
+# product5 = Product.new(
+#   name: "Polo shirt",
+#   description: "Special edition Lacoste x Nike",
+#   price: 80.75,
+#   discount: 25,
+#   store_id: store5.id
+# )
+# product5.photo.attach(io: lacoste_product , filename: "lacoste_product.png", content_type: "image/png")
+# product5.save!
 
-product17 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 78,
-  discount: 55,
-  store_id: store17.id
-)
-product17.photo.attach(io: ca_product , filename: "ca_product.png", content_type: "image/png")
-product17.save!
+# product6 = Product.new(
+#   name: "Air freshener",
+#   description: "Incense air freshener for any room at your home.",
+#   price: 35.85,
+#   discount: 35,
+#   store_id: store6.id
+# )
+# product6.photo.attach(io: zarahome_product , filename: "zarahome_product.png", content_type: "image/png")
+# product6.save!
 
-product18 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 32.80,
-  discount: 20,
-  store_id: store18.id
-)
-product18.photo.attach(io: bershka_product , filename: "bershka_product.png", content_type: "image/png")
-product18.save!
+# product7 = Product.new(
+#   name: "Oversize hoodie",
+#   description: "Overkill oversize hoodie",
+#   price: 90.50,
+#   discount: 45,
+#   store_id: store7.id
+# )
+# product7.photo.attach(io: overkill_product , filename: "overkill_product.png", content_type: "image/png")
+# product7.save!
 
-product19 = Product.new(
-  name: "producto1",
-  description: "",
-  price: 44.50,
-  discount: 40,
-  store_id: store19.id
-)
-product19.photo.attach(io: calvin_product , filename: "calvin_product.png", content_type: "image/png")
-product19.save!
+# product8 = Product.new(
+#   name: "Suit hanger",
+#   description: "Super useful for keeping your suit wrinkle-free.",
+#   price: 60.35,
+#   discount: 20,
+#   store_id: store8.id
+# )
+# product8.photo.attach(io: butler_product , filename: "butler_product.png", content_type: "image/png")
+# product8.save!
 
-product20 = Product.new(
-  name: "CD Tenerife official shirt.",
-  description: "Centenery commemoration shirt.",
-  price: 85,
-  discount: 50,
-  store_id: store20.id
-)
-product20.photo.attach(io: sport_product , filename: "sport_product.png", content_type: "image/png")
-product20.save!
+# product9 = Product.new(
+#   name: "Eye contact lentels",
+#   description: "",
+#   price: 50,
+#   discount: 15,
+#   store_id: store9.id
+# )
+# product9.photo.attach(io: optik_product , filename: "optik_product.png", content_type: "image/png")
+# product9.save!
+
+# product10 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 12.60,
+#   discount: 15,
+#   store_id: store10.id
+# )
+# product10.photo.attach(io: vintage_product , filename: "vintage_product.png", content_type: "image/png")
+# product10.save!
+
+# product11 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 80.75,
+#   discount: 40,
+#   store_id: store11.id
+# )
+# product11.photo.attach(io: boogs_product , filename: "boogs_product.png", content_type: "image/png")
+# product11.save!
+
+# product12 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 60.60,
+#   discount: 25,
+#   store_id: store12.id
+# )
+# product12.photo.attach(io: icrush_product , filename: "icrush_product.png", content_type: "image/png")
+# product12.save!
+
+# product13 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 34,
+#   discount: 30,
+#   store_id: store13.id
+# )
+# product13.photo.attach(io: ludwig_product , filename: "ludwig_product.png", content_type: "image/png")
+# product13.save!
+
+# product14 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 60.75,
+#   discount: 35,
+#   store_id: store14.id
+# )
+# product14.photo.attach(io: whisky_product , filename: "whisky_product.png", content_type: "image/png")
+# product14.save!
+
+# product15 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 20.25,
+#   discount: 30,
+#   store_id: store15.id
+# )
+# product15.photo.attach(io: stoff_product , filename: "stoff_product.png", content_type: "image/png")
+# product15.save!
+
+# product16 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 40.85,
+#   discount: 50,
+#   store_id: store16.id
+# )
+# product16.photo.attach(io: dufthaus_product , filename: "dufthaus_product.png", content_type: "image/png")
+# product16.save!
+
+# product17 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 78,
+#   discount: 55,
+#   store_id: store17.id
+# )
+# product17.photo.attach(io: ca_product , filename: "ca_product.png", content_type: "image/png")
+# product17.save!
+
+# product18 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 32.80,
+#   discount: 20,
+#   store_id: store18.id
+# )
+# product18.photo.attach(io: bershka_product , filename: "bershka_product.png", content_type: "image/png")
+# product18.save!
+
+# product19 = Product.new(
+#   name: "producto1",
+#   description: "",
+#   price: 44.50,
+#   discount: 40,
+#   store_id: store19.id
+# )
+# product19.photo.attach(io: calvin_product , filename: "calvin_product.png", content_type: "image/png")
+# product19.save!
+
+# product20 = Product.new(
+#   name: "CD Tenerife official shirt.",
+#   description: "Centenery commemoration shirt.",
+#   price: 85,
+#   discount: 50,
+#   store_id: store20.id
+# )
+# product20.photo.attach(io: sport_product , filename: "sport_product.png", content_type: "image/png")
+# product20.save!
 
 puts "Products created!!!"
 puts "\n"
