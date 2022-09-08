@@ -16,7 +16,7 @@
       <h4 class="mb-2"><strong><%= @product.name %></strong></h4>
       <div class="discount-info d-flex">
         <% disc = (@product.price * @product.discount/100).round(2) %>
-        <p class="mb-0"><strong>€ <span class="text-muted text-decoration-line-through"><%= @product.price %></span><p class="mx-1">Now: </p> € <%= (@product.price - disc).round(2) %></strong></p>
+        <p class="mb-0"><strong><span class="text-muted text-decoration-line-through"><%= number_with_precision(@product.price, :precision => 2)%> €</span><p class="mx-1">Now: </p><%= number_with_precision(@product.price - disc, :precision => 2) %> €</strong></p>
       </div>
       </div>
       <div class="discount-item-store d-flex  align-items-center justify-content-center">

@@ -33,10 +33,6 @@
     <% end %>
     </div>
 
-    <div class="discount-item-store d-flex  align-items-center justify-content-center">
-        <% products = @store.products.order(:discount) %>
-        <p style="color:white;" class="discount-amount m-0"><%=products.first.discount%>-<%=products.last.discount%>%</p>
-    </div>
       <%= cl_image_tag @store.photo.key, height: 100 %>
       <div class="card-trip-infos py-3 px-3">
 
@@ -98,7 +94,7 @@
             </div>
             <div class="d-flex align-items-center justify-content-between">
               <div class="discount-info d-flex align-items-start">
-                <p class="mb-0"style="color: red; font-size: 1.2em;"><strong><span class="text-muted text-decoration-line-through"><%= number_with_precision(product.price, :precision => 2)%></span><p class="ms-1 mb-0" style="font-size: 1.2em; ">€ Now: <%= number_with_precision(product.price - disc, :precision => 2)%>€</p></strong></p>
+                <p class="mb-0"style="color: red; font-size: 1.2em;"><strong><span class="text-muted text-decoration-line-through"><%= number_with_precision(product.price, :precision => 2) %> €</span><p class="ms-1 mb-0" style="font-size: 1.2em; "> Now: <%= number_with_precision(product.price - disc, :precision => 2)%> €</p></strong></p>
               </div>
               <div class="discount-product d-flex align-items-center justify-content-center me-4">
                   <p class="mb-0" style="color:white; font-weight: bold;"><%=product.discount%>%</p>
