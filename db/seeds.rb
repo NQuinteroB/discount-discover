@@ -782,6 +782,117 @@ product6 = Product.new(
 product6.photo.attach(io: zarahome_product , filename: "zarahome_product.png", content_type: "image/png")
 product6.save!
 
+
+product9 = Product.new(
+  name: "Eye contact lentels",
+  description: "",
+  price: 50,
+  discount: 15,
+  store_id: store9.id
+)
+product9.photo.attach(io: optik_product , filename: "optik_product.png", content_type: "image/png")
+product9.save!
+
+product10 = Product.new(
+  name: "producto1",
+  description: "",
+  price: 12.60,
+  discount: 15,
+  store_id: store10.id
+)
+product10.photo.attach(io: vintage_product , filename: "vintage_product.png", content_type: "image/png")
+product10.save!
+
+product11 = Product.new(
+  name: "producto1",
+  description: "",
+  price: 80.75,
+  discount: 40,
+  store_id: store11.id
+)
+product11.photo.attach(io: boogs_product , filename: "boogs_product.png", content_type: "image/png")
+product11.save!
+
+product12 = Product.new(
+  name: "producto1",
+  description: "",
+  price: 60.60,
+  discount: 25,
+  store_id: store12.id
+)
+product12.photo.attach(io: icrush_product , filename: "icrush_product.png", content_type: "image/png")
+product12.save!
+
+product13 = Product.new(
+  name: "producto1",
+  description: "",
+  price: 34,
+  discount: 30,
+  store_id: store13.id
+)
+product13.photo.attach(io: ludwig_product , filename: "ludwig_product.png", content_type: "image/png")
+product13.save!
+
+product14 = Product.new(
+  name: "producto1",
+  description: "",
+  price: 60.75,
+  discount: 35,
+  store_id: store14.id
+)
+product14.photo.attach(io: whisky_product , filename: "whisky_product.png", content_type: "image/png")
+product14.save!
+
+product15 = Product.new(
+  name: "producto1",
+  description: "",
+  price: 20.25,
+  discount: 30,
+  store_id: store15.id
+)
+product15.photo.attach(io: stoff_product , filename: "stoff_product.png", content_type: "image/png")
+product15.save!
+
+product16 = Product.new(
+  name: "producto1",
+  description: "",
+  price: 40.85,
+  discount: 50,
+  store_id: store16.id
+)
+product16.photo.attach(io: dufthaus_product , filename: "dufthaus_product.png", content_type: "image/png")
+product16.save!
+
+product17 = Product.new(
+  name: "producto1",
+  description: "",
+  price: 78,
+  discount: 55,
+  store_id: store17.id
+)
+product17.photo.attach(io: ca_product , filename: "ca_product.png", content_type: "image/png")
+product17.save!
+
+product18 = Product.new(
+  name: "producto1",
+  description: "",
+  price: 32.80,
+  discount: 20,
+  store_id: store18.id
+)
+product18.photo.attach(io: bershka_product , filename: "bershka_product.png", content_type: "image/png")
+product18.save!
+
+product19 = Product.new(
+  name: "producto1",
+  description: "",
+  price: 44.50,
+  discount: 40,
+  store_id: store19.id
+)
+product19.photo.attach(io: calvin_product , filename: "calvin_product.png", content_type: "image/png")
+product19.save!
+
 product20 = Product.new(
   name: "CD Tenerife official shirt.",
   description: "Centenery commemoration shirt.",
