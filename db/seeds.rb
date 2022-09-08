@@ -43,12 +43,20 @@ calvin_store = URI.open("https://lh5.googleusercontent.com/p/AF1QipNADY-UmfAwv_e
 sport_store = URI.open("https://lh5.googleusercontent.com/p/AF1QipP_23het-zMKKmy_yukjatDzGWxf9KNucg3IY4b=w408-h543-k-no")
 
 primark_product = URI.open("https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7a9b2c6bb14f4b108a27a9d300abc4fe_9366/3-STRIPES_CUSHIONED_CREW_SOCKS_3_PAIRS_White_DZ9346_03_standard.jpg")
-primark_store1 = URI.open('https://i.pinimg.com/originals/9c/da/ad/9cdaadf604a1feb593d73f6a9ef62665.jpg')
-primark_product = URI.open()
-primark_product = URI.open()
-primark_product = URI.open()
+primark_product1 = URI.open('https://i.pinimg.com/originals/9c/da/ad/9cdaadf604a1feb593d73f6a9ef62665.jpg')
+primark_product2 = URI.open('https://primedia.primark.com/s/primark/210107437_ms?locale=cs-*,en-*,*&$product$')
+primark_product3 = URI.open('https://primedia.primark.com/i/primark/newjacket-1')
+primark_product4 = URI.open('https://primedia.primark.com/i/primark/spiderman-2(and-homepage)?w=400')
+
 hm_product = URI.open("https://img.ltwebstatic.com/images3_pi/2021/11/09/1636455624b80016229255cb33d73d01456b8c0fab_thumbnail_900x.webp")
+hm_product1 = URI.open('http://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F0f%2F92%2F0f92959f2ee983e8f56287b45a9348b32c17f622.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bmen_trousers_trousers_slim_all%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]')
+hm_product2 = URI.open('https://lp2.hm.com/hmgoepprod?set=source[/49/b4/49b40c2e1f4a6cc0f24c3ade5b297bea84814ea6.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[z],hmver[2]&call=url[file:/product/main]')
+hm_product3 = URI.open('https://lp2.hm.com/hmgoepprod?set=source[/5d/15/5d15da4c0b130e8a62c8330ec48e867b6bdeea01.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[z],hmver[2]&call=url[file:/product/main]')
+hm_product4 = URI.open('https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F72%2F51%2F7251b0211cbaac7b1dc1473474fec752a9bb4275.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bhome_decorations%5D%2Ctype%5BDESCRIPTIVESTILLLIFE%5D%2Cres%5Bm%5D%2Chmver%5B2%5D&call=url[file:/product/main]')
+
 depot_product = URI.open("https://www.depotmaletools.com/wp-content/uploads/2020/05/depot-uomo.jpg")
+depot_product1 = URI.open('https://depot.dam.aboutyou.cloud/images/7ede4683aac76e4477c20e57c4c4d1e1.jpg?width=290&height=290')
+
 steiff_product = URI.open("https://www.steiff.com/img/310/300/resize/catalog/product/s/o/soft-cuddly-friends-honey-teddybaer-113482-3.jpg")
 lacoste_product = URI.open("https://lac-sk.akinoncdn.com/products/2022/03/02/174495/1f50acbc-56a1-49ba-9e1f-ca648858e228.jpg")
 zarahome_product = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZhOGMyat-L881YqU8zACaBGlklJwBbMf0V_B4qPE4k0B6AIyrVjTsDvQkpQW-M1_A8_M&usqp=CAU")
@@ -294,7 +302,7 @@ puts "Stores created!!!"
 puts "\n"
 puts "Creating products..."
 
-
+# This are primark products
 product1 = Product.new(
   name: "Socks",
   description: "Adidas socks for doing sport.",
@@ -302,7 +310,7 @@ product1 = Product.new(
   discount: 25,
   store_id: store1.id
 )
-product1.photo.attach(io: primark_product , filename: "primark_product.png", content_type: "image/png")
+product1.photo.attach(io: primark_product, filename: "primark_product.png", content_type: "image/png")
 product1.save!
 
 product2 = Product.new(
@@ -312,30 +320,116 @@ product2 = Product.new(
   discount: 15,
   store_id: store1.id
 )
-product2.photo.attach(io: primark_product1 , filename: "primark_product1.png", content_type: "image/png")
+product2.photo.attach(io: primark_product1, filename: "primark_product1.png", content_type: "image/png")
 product2.save!
 
+product3 = Product.new(
+  name: "Crossbody Messenger Bag",
+  description: "Material: Polyester 100% Colour: Multi",
+  price: 5.90,
+  discount: 15,
+  store_id: store1.id
+)
+product3.photo.attach(io: primark_product2, filename: "primark_product2.png", content_type: "image/png")
+product3.save!
 
-product2 = Product.new(
+product4 = Product.new(
+  name: "Regular Fit Cotton Check Shirt",
+  description: "Office attire on point. Made from a cotton check fabric, this smart shirt is ideal for work or a special occasion. Material: Cotton 100% Colour: Blue. Model is size: M",
+  price: 12.90,
+  discount: 20,
+  store_id: store1.id
+)
+product4.photo.attach(io: primark_product3, filename: "primark_product3.png", content_type: "image/png")
+product4.save!
+
+product5 = Product.new(
+  name: "Spider-Man“ T-Shirt",
+  description: "Made from a cotton. Material: Cotton 100% Model size: 8",
+  price: 12.90,
+  discount: 20,
+  store_id: store1.id
+)
+product5.photo.attach(io: primark_product4, filename: "primark_product4.png", content_type: "image/png")
+product5.save!
+
+# This are H&M products
+
+product1 = Product.new(
   name: "Sweater",
   description: "Funny mushroom swaeter.",
   price: 34,
   discount: 15,
   store_id: store2.id
 )
-product2.photo.attach(io: hm_product , filename: "hm_product.png", content_type: "image/png")
+product1.photo.attach(io: hm_product, filename: "hm_product.png", content_type: "image/png")
+product1.save!
+
+product2 = Product.new(
+  name: "Twillhose Slim Fit",
+  description: "5-pocket pants in stretch washed twill with regular waist and zipper closure. Slim fit.",
+  price: 19.99,
+  discount: 40,
+  store_id: store2.id
+)
+product2.photo.attach(io: hm_product1, filename: "hm_product1.png", content_type: "image/png")
 product2.save!
 
 product3 = Product.new(
+  name: "Knit Sweater Vest",
+  description: "Sweater vest in a knit wool blend. Round neckline, slit at sides of hem, and slightly longer hem at back. Ribbing at neckline, armholes, and hem.",
+  price: 27.99,
+  discount: 20,
+  store_id: store2.id
+)
+product3.photo.attach(io: hm_product2, filename: "hm_product1.png", content_type: "image/png")
+product3.save!
+
+product4 = Product.new(
+  name: "Shimmer smartphone case",
+  description: "Bag with slim detachable shoulder strap, short handle and an asymmetrical flap with concealed snap. Lined. Width 17.5 cm. Height 10.3 cm.",
+  price: 19.99,
+  discount: 50,
+  store_id: store2.id
+)
+product4.photo.attach(io: hm_product3, filename: "hm_product1.png", content_type: "image/png")
+product4.save!
+
+product5 = Product.new(
+  name: "Clear glass box",
+  description: "Rectangular box made of clear glass with a metal frame and lid with a small hook. Size 5x10,5x13 cm.",
+  price: 12.99,
+  discount: 15,
+  store_id: store2.id
+)
+product5.photo.attach(io: hm_product4, filename: "hm_product1.png", content_type: "image/png")
+product5.save!
+
+# DEPOT
+
+product1 = Product.new(
   name: "Skincare set",
   description: "Best skincare set in the market. Ideal for travel.",
   price: 40.85,
   discount: 50,
   store_id: store3.id
 )
-product3.photo.attach(io: depot_product , filename: "depot_product.png", content_type: "image/png")
-product3.save!
+product1.photo.attach(io: depot_product , filename: "depot_product.png", content_type: "image/png")
+product1.save!
 
+product2 = Product.new(
+  name: "Outdoor hanging chair Kos",
+  description: "Material: 60% polyester and 40% cotton handmade. Dimensions: ⌀ 60 x H 130 cm. Color
+  beige",
+  price: 69.99,
+  discount: 35,
+  store_id: store3.id
+)
+product2.photo.attach(io: depot_product1, filename: "depot_product1.png", content_type: "image/png")
+product2.save!
+
+
+#next store
 product4 = Product.new(
   name: "Teddy Bear",
   description: "50cm tall teddy bear for kids.",

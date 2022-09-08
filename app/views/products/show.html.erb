@@ -1,34 +1,33 @@
 
-    <div class="card-trip rounded-bottom">
-    <div class="d-flex align-items-center">
-      <%= link_to store_path(@store) do %>
-    <i class="fa-solid fa-arrow-left" style="color: black"></i>
-    <% end %>
-    </div>
+<div class="card-trip rounded-bottom">
+  <div class="d-flex align-items-center">
+    <%= link_to store_path(@store) do %>
+  <i class="fa-solid fa-arrow-left" style="color: black"></i>
+  <% end %>
+</div>
 
-    <div class="discount-item-store d-flex  align-items-center justify-content-center">
+<%= cl_image_tag @product.photo.key, height: 100 %>
+
+<div class="card-trip-infos py-3 px-3">
+
+  <div class="d-flex flex-column mb-3">
+    <div class="d-flex justify-content-between">
+      <div>
+      <h4 class="mb-2"><strong><%= @product.name %></strong></h4>
+      <div class="discount-info d-flex">
+        <% disc = (@product.price * @product.discount/100).round(2) %>
+        <p class="mb-0"><strong>€ <span class="text-muted text-decoration-line-through"><%= @product.price %></span><p class="mx-1">Now: </p> € <%= (@product.price - disc).round(2) %></strong></p>
+      </div>
+      </div>
+      <div class="discount-item-store d-flex  align-items-center justify-content-center">
         <% products = @store.products.order(:discount) %>
         <p class="discount-amount m-0"><%= @product.discount%>%</p>
-    </div>
-
-      <%= cl_image_tag @product.photo.key, height: 100 %>
-      <div class="card-trip-infos py-3 px-3">
-
-        <div class="d-flex flex-column mb-3">
-          <div class="d-flex justify-content-between align-items-center">
-            <h4><strong><%= @product.name %></strong></h4>
-              <div class="discount-info d-flex align-items-between">
-                <% disc = (@product.price * @product.discount/100).round(2) %>
-                <p><strong>Before: €<span class="text-muted text-decoration-line-through"><%= @product.price %></span><p class="mx-1" style="color: red">now:</p> € <%= @product.price - disc %></strong></p>
-              </div>
-          </div>
-         <hr>
-          <div>
-            <h5>Description: <%= @product.description %></h5>
-          </div>
-        </div>
       </div>
     </div>
-  </div>
+   <hr class="mt-2">
+    <div>
+      <h4><strong>Description:</strong></h4>
+      <p><%= @product.description %></p>
+    </div>
   </div>
 </div>
