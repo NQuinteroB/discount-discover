@@ -124,17 +124,6 @@ store1 = Store.new(
 store1.photo.attach(io: primark_store, filename: "primark.png", content_type: "image/png")
 store1.save!
 
-store2 = Store.new(
-  name: "H&M",
-  address: "Schildergasse 98-100, 50667 Köln",
-  opening_hour: "09:00",
-  closing_hour: "20:00",
-  user_id: owner.id
-)
-
-store2.photo.attach(io: hm_store, filename: "hm.png", content_type: "image/png")
-store2.save!
-
 store3 = Store.new(
   name: "DEPOT",
   address: "Hornstraße 85, 50823 Köln",
@@ -192,7 +181,7 @@ store7.save!
 
 store20 = Store.new(
   name: "SportScheck",
-  address: "Schildergasse 38-42, 50667 Köln",
+  address: "Kennedy-Ufer, 50679 Köln",
   opening_hour: "10:00",
   closing_hour: "20:00",
   user_id: owner.id
@@ -200,6 +189,17 @@ store20 = Store.new(
 
 store20.photo.attach(io: sport_store, filename: "sport.png", content_type: "image/png")
 store20.save!
+
+store2 = Store.new(
+  name: "H&M",
+  address: "Schildergasse 98-100, 50667 Köln",
+  opening_hour: "09:00",
+  closing_hour: "20:00",
+  user_id: owner.id
+)
+
+store2.photo.attach(io: hm_store, filename: "hm.png", content_type: "image/png")
+store2.save!
 
 store8 = Store.new(
   name: "BUTLERS",
@@ -247,7 +247,7 @@ store11.save!
 
 store12 = Store.new(
   name: "ICRUSH-Flagshipstore",
-  address: "Ehrenstraße 59, 50672 Köln",
+  address: "Dr.-Simons-Straße 10, 50679 Köln",
   opening_hour: "11:00",
   closing_hour: "18:30",
   user_id: owner.id
@@ -324,7 +324,7 @@ store18.save!
 
 store19 = Store.new(
   name: "Calvin Klein",
-  address: "Schildergasse 55, 50667 Köln",
+  address: "Cäcilienstraße 35, 50676 Köln",
   opening_hour: "10:00",
   closing_hour: "20:00",
   user_id: owner.id
@@ -332,7 +332,6 @@ store19 = Store.new(
 
 store19.photo.attach(io: calvin_store , filename: "calvin.png", content_type: "image/png")
 store19.save!
-
 
 
 puts "Stores created!!!"
@@ -532,7 +531,7 @@ product4 = Product.new(
   name: "Disney Belle",
   description: "Belle, the protagonist of 'Beauty and the Beast', is the first Steiff Disney Princess made of wool felt. Your lovingly hand-painted.",
   price: 1.29,
-  discount: 70,
+  discount: 35,
   store_id: store4.id
 )
 product4.photo.attach(io: steiff_product3, filename: "steiff_product1.png", content_type: "image/png")
@@ -585,7 +584,7 @@ product4 = Product.new(
   name: "Two-tone",
   description: "Two-tone reversible women's tote bag ANNA.",
   price: 125.50,
-  discount: 70,
+  discount: 40,
   store_id: store5.id
 )
 product4.photo.attach(io: lacoste_product3, filename: "lacoste_product1.png", content_type: "image/png")
@@ -639,7 +638,7 @@ product4 = Product.new(
   name: "CHENILLE BLANKET ",
   description: "Plain chenille blanket with fringes.",
   price: 125.10,
-  discount: 70,
+  discount: 50,
   store_id: store6.id
 )
 product4.photo.attach(io: zarahome_product3, filename: "lacoste_product1.png", content_type: "image/png")
@@ -725,7 +724,7 @@ product1.save!
 product2 = Product.new(
   name: "RETRO",
   description: "Cup set 4 pcs. 550ml.",
-  price: 70.00,
+  price: 30.00,
   discount: 60,
   store_id: store8.id
 )
@@ -746,7 +745,7 @@ product4 = Product.new(
   name: "VINOTHEK",
   description: "wine shelf.",
   price: 125.00,
-  discount: 70,
+  discount: 40,
   store_id: store8.id
 )
 product4.photo.attach(io: butler_product3, filename: "butler_product1.png", content_type: "image/png")
